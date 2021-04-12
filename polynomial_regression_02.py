@@ -70,7 +70,11 @@ def create_polynomial_features(X):
     X = np.hstack((X, X_virtual))
     interc = np.ones((X.shape[0], 1))
     X = np.hstack((interc, X))
+<<<<<<< HEAD
     print(X,type(X), X.shape)
+=======
+    print(X.shape)
+>>>>>>> origin/master
     return X
 
 def split_dataset(X, train_ratio):
@@ -139,7 +143,10 @@ x_labels = ['GIFA', 'STOREY', 'SPAN', 'LOAD']
 y_labels = ['CO2eq']
 all_labels = x_labels + y_labels
 CO2_dict = build_dictionary(X, y, x_labels, y_labels)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 df = pd.DataFrame(CO2_dict, columns=all_labels)
 #display(df)
 #draw_table(df)
@@ -194,6 +201,7 @@ next :
  how do we know if these values are good/bad? 
  is this overfiting ?
  order : split train/test - add intercept - scale - create function... ?
+<<<<<<< HEAD
 print the obtained beta - will say relations to CO2
 
 """
@@ -219,3 +227,10 @@ test_print("good", good)
 things = (b, np.hstack([x for x in range(80)]).reshape(-1,1), b.copy())
 test = np.hstack(things)
 test_print("test", test)
+=======
+
+
+"""
+
+
+>>>>>>> origin/master
