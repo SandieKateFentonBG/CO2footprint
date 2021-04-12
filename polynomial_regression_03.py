@@ -32,13 +32,14 @@ def build_dictionary(X_values, y_values, x_labels, y_labels):
         dict[y_labels[i]] = y_values[:, i]
     return dict
 
-def plot_graph(dataframe, x_label, y_label, folder=None):
+def plot_graph(dataframe, x_label, y_label, folder=None, plot=False):
     sns.scatterplot(data=dataframe, x=x_label, y=y_label, hue=y_label)
     if folder :
         plt.savefig(folder + '/'+ x_label + '-' + y_label +'.png')
-    plt.show()
+    if plot:
+        plt.show()
 
-def draw_table(dataframe, folder=None, table_name=None):
+def draw_table(dataframe, folder=None, table_name=None, plot=False):
     fig, ax = plt.subplots()
     # hide axes
     fig.patch.set_visible(False)
@@ -48,7 +49,8 @@ def draw_table(dataframe, folder=None, table_name=None):
     fig.tight_layout()
     if table_name :
         plt.savefig(folder + '/'+ table_name +'.png')
-    plt.show()
+    if plot:
+        plt.show()
 
 ### 2. format & visualize training data
 
@@ -58,19 +60,19 @@ def scale_features(X):
     x_std = np.std(X, axis=0)
     return (X - x_bar) / x_std
 
-def create_polynomial_features(X):
+def create_polynomial_features(X, powerlist):
     # create virtual features
-    #  raise all variables to second and third degree
+    #  raise all variables to degree in list
     X_virtual = []
     for i in range(len(X[0])):
-        X_virtual_i = [np.power(X[:,i], 2).reshape([-1,1]),
-                       np.power(X[:,i], 3).reshape([-1,1])]
+        X_virtual_i = []                        #?? can you add df?
+        for power in powerlist:
+            X_virtual_i += [np.power(X[:,i], power).reshape([-1,1])]
         X_virtual += X_virtual_i
     X_virtual = np.hstack(X_virtual)
     X = np.hstack((X, X_virtual))
     interc = np.ones((X.shape[0], 1))
     X = np.hstack((interc, X))
-    print(X,type(X), X.shape)
     return X
 
 def split_dataset(X, train_ratio):
@@ -115,14 +117,15 @@ def MAE(prediction, reference):
 
 ### 5. Display results
 
-def compare_results(y_te, y_pred, folder=None, figure_name=None):
+def compare_results(y_te, y_pred, folder=None, plot=False, figure_name=None):
     # plot the ground truth and the predicted
     x_axis = np.linspace(1,len(y_te),len(y_te))
     plt.plot(x_axis,y_te,'b',x_axis,y_pred,'r')
-    plt.legend(('Ground truth','Predicted'))
-    if figure_name:
-        plt.savefig(folder + '/' + figure_name + '.png')
-    plt.show()
+    plt.legend(('Ground truth'+ figure_name,'Predicted'+ figure_name))
+    if plot:
+        plt.show()
+    if folder:
+        plt.savefig(folder + '/' + figure_name + 'truth_vs_pred' + '.png')
 
 
 """
@@ -134,27 +137,25 @@ def compare_results(y_te, y_pred, folder=None, figure_name=None):
 ### 1. load & visualize full data
 
 X = load_dat("210406_cs_pm_co2/xdata_gifa_storey_span_load.csv")
-y = load_dat("210406_cs_pm_co2/ydata_totCO2.csv")
+#y = load_dat("210406_cs_pm_co2/ydata_totCO2.csv")
+y = load_dat("210406_cs_pm_co2/ydata_totCO2rate.csv")
 x_labels = ['GIFA', 'STOREY', 'SPAN', 'LOAD']
-y_labels = ['CO2eq']
+#y_labels = ['CO2eq']
+y_labels = ['CO2eqrate']
 all_labels = x_labels + y_labels
 CO2_dict = build_dictionary(X, y, x_labels, y_labels)
-
 df = pd.DataFrame(CO2_dict, columns=all_labels)
-#display(df)
+display(df)
 #draw_table(df)
-#plot_graph(df, "GIFA", "CO2eq")
-#plot_graph(df, "STOREY", "CO2eq", '210406_cs_pm_co2')
-#plot_graph(df, "SPAN", "CO2eq", '210406_cs_pm_co2')
-#plot_graph(df, "LOAD", "CO2eq", '210406_cs_pm_co2')
+path = '210413_cs_pm_co2'
+for x in []: # ['GIFA', 'STOREY', 'SPAN', 'LOAD']:
+    plot_graph(df, x, y_labels[0], path)
 
 ### 2. format & visualize training data
 
-print ("before", X[0])
-X = scale_features(X)
-print ("after", X[0])
-y = scale_features(y)
-create_polynomial_features(X)
+X = scale_features(X) #needed??
+y = scale_features(y) #needed??
+X = create_polynomial_features(X, [2,3])
 X_tr, y_tr, X_te, y_te = split_dataset(X, 0.8)
 
 ### 3. regularized linear regression
@@ -163,6 +164,7 @@ reg = 1
 theta_opt = regularized_linear_regression_parameters(X_tr, y_tr, reg)
 pred = predict_footprint(X_te, theta_opt)
 print("regularization param : ", reg)
+print(theta_opt)
 
 ### 4. evaluation
 
@@ -175,7 +177,7 @@ print("Cost: ", cost)
 
 ### 5. Display results
 
-compare_results(y_te, pred)
+compare_results(y_te, pred, path, False, y_labels[0])
 #compare_results(y_te, pred, '210406_cs_pm_co2', 'truth_vs_pred')
 
 """
@@ -199,23 +201,3 @@ print the obtained beta - will say relations to CO2
 """
 
 
-def test_print(text, obj, showobj=False, isarray=True):
-    print(text)
-    print(type(obj), len(obj))
-    if showobj:
-        print(obj)
-    if isarray:
-        print(obj.shape)
-    print()
-
-test = load_dat("210406_cs_pm_co2/xdata_gifa_storey_span_load.csv")
-m = test[:,0]
-b = np.power(m, 2).reshape(-1,1)
-
-things = (b, b.copy(), b.copy())
-good = np.hstack(things)
-test_print("good", good)
-
-things = (b, np.hstack([x for x in range(80)]).reshape(-1,1), b.copy())
-test = np.hstack(things)
-test_print("test", test)
