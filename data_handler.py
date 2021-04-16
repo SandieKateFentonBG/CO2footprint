@@ -1,6 +1,5 @@
 import numpy as np
 import seaborn as sns
-import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib
 
@@ -141,11 +140,12 @@ def plot_graph(dataframe, x_label, y_label,
         plt.show()
 
 def plot_graph_adv(dataframe, x_label, y_label, label_dict,
-                   title="Features influencing CO2 footprint of Structures - Datasource : Price & Myers",
-                   figure_size=(12,15), existing_folder=None, new_folder_path=None, plot=False, qual_features=STR_FEATURES):
+                   title="Features influencing CO2 footprint of Structures - Datasource : Price & Myers", reference="",
+                   figure_size=(12,15), qual_features=STR_FEATURES,
+                   existing_folder=None, new_folder_path=None, plot=False):
     labels = label_dict[x_label]
     fig, ax = plt.subplots(figsize=figure_size)
-    ax.set_title(title)
+    ax.set_title(title + " " + reference)
     if x_label in qual_features:
         x = np.arange(len(labels))
         ax.set_ylabel(y_label)

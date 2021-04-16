@@ -19,12 +19,21 @@ def evaluate_cost(prediction, reference, method='mse'):
         return MAE(prediction, reference) / len(prediction)
 
 
-def plot_comparative_results(y_te, y_pred, folder=None, plot=False, figure_name=None):
+def plot_comparative_results(y_te, y_pred,figure_size=(12,15),
+                             title="Predicted results vs Ground truth", folder=None, plot=False,
+                             figure_name=None, reference=""):
     # plot the ground truth and the predicted
+    fig, ax = plt.subplots(figsize=figure_size)
+    ax.set_title(title+" "+reference)
     x_axis = np.linspace(1,len(y_te),len(y_te))
+    plt.ylabel(figure_name)
+    plt.xlabel("Test samples")
     plt.plot(x_axis,y_te,'b',x_axis,y_pred,'r')
-    plt.legend(('Ground truth'+ figure_name,'Predicted'+ figure_name))
+    plt.legend(('Ground truth - value from PM database','Predicted - value from linear regression'))
+    if folder:
+        plt.savefig(folder + '/' + figure_name + '_truth_vs_pred' + '.png')
     if plot:
         plt.show()
-    if folder:
-        plt.savefig(folder + '/' + figure_name + 'truth_vs_pred' + '.png')
+
+
+
