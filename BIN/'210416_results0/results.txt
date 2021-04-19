@@ -1,0 +1,726 @@
+object of study >>> ['Calculated tCO2e_per_m2']
+
+regularization param >>> [1]
+
+polynomial_exponents >>> 
+
+0  ones
+
+1  GIFA (m2) ^1
+
+2  GIFA (m2) ^2
+
+3  GIFA (m2) ^3
+
+4  Storeys ^1
+
+5  Storeys ^2
+
+6  Storeys ^3
+
+7  Typical Span (m) ^1
+
+8  Typical Span (m) ^2
+
+9  Typical Span (m) ^3
+
+10  Typ Qk (kN_per_m2) ^1
+
+11  Typ Qk (kN_per_m2) ^2
+
+12  Typ Qk (kN_per_m2) ^3
+
+theta_opt >>> 
+
+0  0.26526325386104976
+
+1  -0.08439222185294411
+
+2  0.07080401398677262
+
+3  -0.012196010273843799
+
+4  0.03734209113468283
+
+5  0.015357649275136147
+
+6  -0.003997501561195859
+
+7  0.08504247259961721
+
+8  -0.026193882040043186
+
+9  0.0015204712497950473
+
+10  0.030134450201288285
+
+11  0.023563356435744486
+
+12  -0.0041125224706675305
+
+Mean square error >>> [0.012531363643399646]
+
+Mean absolute error >>> [0.11585740160104097]
+
+Cost >>> [0.0007832102277124779]
+
+object of study >>> ['Calculated tCO2e_per_m2']
+
+regularization param >>> [1]
+
+polynomial_exponents >>> 
+
+0  ones
+
+1  GIFA (m2) ^1
+
+2  GIFA (m2) ^2
+
+3  GIFA (m2) ^3
+
+4  Storeys ^1
+
+5  Storeys ^2
+
+6  Storeys ^3
+
+7  Typical Span (m) ^1
+
+8  Typical Span (m) ^2
+
+9  Typical Span (m) ^3
+
+10  Typ Qk (kN_per_m2) ^1
+
+11  Typ Qk (kN_per_m2) ^2
+
+12  Typ Qk (kN_per_m2) ^3
+
+theta_opt >>> 
+
+0  0.26526325386104976
+
+1  -0.08439222185294411
+
+2  0.07080401398677262
+
+3  -0.012196010273843799
+
+4  0.03734209113468283
+
+5  0.015357649275136147
+
+6  -0.003997501561195859
+
+7  0.08504247259961721
+
+8  -0.026193882040043186
+
+9  0.0015204712497950473
+
+10  0.030134450201288285
+
+11  0.023563356435744486
+
+12  -0.0041125224706675305
+
+Mean square error >>> [0.012531363643399646]
+
+Mean absolute error >>> [0.11585740160104097]
+
+Cost >>> [0.0007832102277124779]
+
+object of study >>> ['Calculated tCO2e_per_m2']
+
+regularization param >>> [1]
+
+polynomial_exponents >>> 
+
+0  ones
+
+1  GIFA (m2) ^1
+
+2  GIFA (m2) ^2
+
+3  GIFA (m2) ^3
+
+4  Storeys ^1
+
+5  Storeys ^2
+
+6  Storeys ^3
+
+7  Typical Span (m) ^1
+
+8  Typical Span (m) ^2
+
+9  Typical Span (m) ^3
+
+10  Typ Qk (kN_per_m2) ^1
+
+11  Typ Qk (kN_per_m2) ^2
+
+12  Typ Qk (kN_per_m2) ^3
+
+theta_opt >>> 
+
+0  0.26526325386104976
+
+1  -0.08439222185294411
+
+2  0.07080401398677262
+
+3  -0.012196010273843799
+
+4  0.03734209113468283
+
+5  0.015357649275136147
+
+6  -0.003997501561195859
+
+7  0.08504247259961721
+
+8  -0.026193882040043186
+
+9  0.0015204712497950473
+
+10  0.030134450201288285
+
+11  0.023563356435744486
+
+12  -0.0041125224706675305
+
+Mean square error >>> [0.012531363643399646]
+
+Mean absolute error >>> [0.11585740160104097]
+
+Cost >>> [0.0007832102277124779]
+
+object of study >>> ['Calculated tCO2e_per_m2']
+
+regularization param >>> [1]
+
+polynomial_exponents >>> 
+
+0  ones
+
+1  GIFA (m2) ^1
+
+2  GIFA (m2) ^2
+
+3  GIFA (m2) ^3
+
+4  Storeys ^1
+
+5  Storeys ^2
+
+6  Storeys ^3
+
+7  Typical Span (m) ^1
+
+8  Typical Span (m) ^2
+
+9  Typical Span (m) ^3
+
+10  Typ Qk (kN_per_m2) ^1
+
+11  Typ Qk (kN_per_m2) ^2
+
+12  Typ Qk (kN_per_m2) ^3
+
+theta_opt >>> 
+
+0  0.26526325386104976
+
+1  -0.08439222185294411
+
+2  0.07080401398677262
+
+3  -0.012196010273843799
+
+4  0.03734209113468283
+
+5  0.015357649275136147
+
+6  -0.003997501561195859
+
+7  0.08504247259961721
+
+8  -0.026193882040043186
+
+9  0.0015204712497950473
+
+10  0.030134450201288285
+
+11  0.023563356435744486
+
+12  -0.0041125224706675305
+
+Mean square error >>> [0.012531363643399646]
+
+Mean absolute error >>> [0.11585740160104097]
+
+Cost >>> [0.0007832102277124779]
+
+object of study >>> ['Calculated tCO2e_per_m2']
+
+regularization param >>> [1]
+
+polynomial_exponents >>> 
+
+0  ones
+
+1  GIFA (m2) ^1
+
+2  GIFA (m2) ^2
+
+3  GIFA (m2) ^3
+
+4  Storeys ^1
+
+5  Storeys ^2
+
+6  Storeys ^3
+
+7  Typical Span (m) ^1
+
+8  Typical Span (m) ^2
+
+9  Typical Span (m) ^3
+
+10  Typ Qk (kN_per_m2) ^1
+
+11  Typ Qk (kN_per_m2) ^2
+
+12  Typ Qk (kN_per_m2) ^3
+
+theta_opt >>> 
+
+0  0.26526325386104976
+
+1  -0.08439222185294411
+
+2  0.07080401398677262
+
+3  -0.012196010273843799
+
+4  0.03734209113468283
+
+5  0.015357649275136147
+
+6  -0.003997501561195859
+
+7  0.08504247259961721
+
+8  -0.026193882040043186
+
+9  0.0015204712497950473
+
+10  0.030134450201288285
+
+11  0.023563356435744486
+
+12  -0.0041125224706675305
+
+Mean square error >>> [0.012531363643399646]
+
+Mean absolute error >>> [0.11585740160104097]
+
+Cost >>> [0.0007832102277124779]
+
+object of study >>> ['Calculated tCO2e_per_m2']
+
+regularization param >>> [1]
+
+polynomial_exponents >>> 
+
+0  ones
+
+1  GIFA (m2) ^1
+
+2  GIFA (m2) ^2
+
+3  GIFA (m2) ^3
+
+4  Storeys ^1
+
+5  Storeys ^2
+
+6  Storeys ^3
+
+7  Typical Span (m) ^1
+
+8  Typical Span (m) ^2
+
+9  Typical Span (m) ^3
+
+10  Typ Qk (kN_per_m2) ^1
+
+11  Typ Qk (kN_per_m2) ^2
+
+12  Typ Qk (kN_per_m2) ^3
+
+theta_opt >>> 
+
+0  0.26526325386104976
+
+1  -0.08439222185294411
+
+2  0.07080401398677262
+
+3  -0.012196010273843799
+
+4  0.03734209113468283
+
+5  0.015357649275136147
+
+6  -0.003997501561195859
+
+7  0.08504247259961721
+
+8  -0.026193882040043186
+
+9  0.0015204712497950473
+
+10  0.030134450201288285
+
+11  0.023563356435744486
+
+12  -0.0041125224706675305
+
+Mean square error >>> [0.012531363643399646]
+
+Mean absolute error >>> [0.11585740160104097]
+
+Cost >>> [0.0007832102277124779]
+
+object of study >>> ['Calculated tCO2e_per_m2']
+
+regularization param >>> [1]
+
+polynomial_exponents >>> 
+
+0  ones
+
+1  GIFA (m2) ^1
+
+2  GIFA (m2) ^2
+
+3  GIFA (m2) ^3
+
+4  Storeys ^1
+
+5  Storeys ^2
+
+6  Storeys ^3
+
+7  Typical Span (m) ^1
+
+8  Typical Span (m) ^2
+
+9  Typical Span (m) ^3
+
+10  Typ Qk (kN_per_m2) ^1
+
+11  Typ Qk (kN_per_m2) ^2
+
+12  Typ Qk (kN_per_m2) ^3
+
+theta_opt >>> 
+
+0  0.26526325386104976
+
+1  -0.08439222185294411
+
+2  0.07080401398677262
+
+3  -0.012196010273843799
+
+4  0.03734209113468283
+
+5  0.015357649275136147
+
+6  -0.003997501561195859
+
+7  0.08504247259961721
+
+8  -0.026193882040043186
+
+9  0.0015204712497950473
+
+10  0.030134450201288285
+
+11  0.023563356435744486
+
+12  -0.0041125224706675305
+
+Mean square error >>> [0.012531363643399646]
+
+Mean absolute error >>> [0.11585740160104097]
+
+Cost >>> [0.0007832102277124779]
+
+object of study >>> ['Calculated tCO2e_per_m2']
+
+regularization param >>> [1]
+
+polynomial_exponents >>> 
+
+0  ones
+
+1  GIFA (m2) ^1
+
+2  GIFA (m2) ^2
+
+3  GIFA (m2) ^3
+
+4  Storeys ^1
+
+5  Storeys ^2
+
+6  Storeys ^3
+
+7  Typical Span (m) ^1
+
+8  Typical Span (m) ^2
+
+9  Typical Span (m) ^3
+
+10  Typ Qk (kN_per_m2) ^1
+
+11  Typ Qk (kN_per_m2) ^2
+
+12  Typ Qk (kN_per_m2) ^3
+
+theta_opt >>> 
+
+0  0.26526325386104976
+
+1  -0.08439222185294411
+
+2  0.07080401398677262
+
+3  -0.012196010273843799
+
+4  0.03734209113468283
+
+5  0.015357649275136147
+
+6  -0.003997501561195859
+
+7  0.08504247259961721
+
+8  -0.026193882040043186
+
+9  0.0015204712497950473
+
+10  0.030134450201288285
+
+11  0.023563356435744486
+
+12  -0.0041125224706675305
+
+Mean square error >>> [0.012531363643399646]
+
+Mean absolute error >>> [0.11585740160104097]
+
+Cost >>> [0.0007832102277124779]
+
+object of study >>> ['Calculated tCO2e_per_m2']
+
+regularization param >>> [1]
+
+polynomial_exponents >>> 
+
+0  ones
+
+1  GIFA (m2) ^1
+
+2  GIFA (m2) ^2
+
+3  GIFA (m2) ^3
+
+4  Storeys ^1
+
+5  Storeys ^2
+
+6  Storeys ^3
+
+7  Typical Span (m) ^1
+
+8  Typical Span (m) ^2
+
+9  Typical Span (m) ^3
+
+10  Typ Qk (kN_per_m2) ^1
+
+11  Typ Qk (kN_per_m2) ^2
+
+12  Typ Qk (kN_per_m2) ^3
+
+theta_opt >>> 
+
+0  0.26526325386104976
+
+1  -0.08439222185294411
+
+2  0.07080401398677262
+
+3  -0.012196010273843799
+
+4  0.03734209113468283
+
+5  0.015357649275136147
+
+6  -0.003997501561195859
+
+7  0.08504247259961721
+
+8  -0.026193882040043186
+
+9  0.0015204712497950473
+
+10  0.030134450201288285
+
+11  0.023563356435744486
+
+12  -0.0041125224706675305
+
+Mean square error >>> [0.012531363643399646]
+
+Mean absolute error >>> [0.11585740160104097]
+
+Cost >>> [0.0007832102277124779]
+
+object of study >>> ['Calculated tCO2e_per_m2']
+
+regularization param >>> [1]
+
+polynomial_exponents >>> 
+
+0  ones
+
+1  GIFA (m2) ^1
+
+2  GIFA (m2) ^2
+
+3  GIFA (m2) ^3
+
+4  Storeys ^1
+
+5  Storeys ^2
+
+6  Storeys ^3
+
+7  Typical Span (m) ^1
+
+8  Typical Span (m) ^2
+
+9  Typical Span (m) ^3
+
+10  Typ Qk (kN_per_m2) ^1
+
+11  Typ Qk (kN_per_m2) ^2
+
+12  Typ Qk (kN_per_m2) ^3
+
+theta_opt >>> 
+
+0  0.26526325386104976
+
+1  -0.08439222185294411
+
+2  0.07080401398677262
+
+3  -0.012196010273843799
+
+4  0.03734209113468283
+
+5  0.015357649275136147
+
+6  -0.003997501561195859
+
+7  0.08504247259961721
+
+8  -0.026193882040043186
+
+9  0.0015204712497950473
+
+10  0.030134450201288285
+
+11  0.023563356435744486
+
+12  -0.0041125224706675305
+
+Mean square error >>> [0.012531363643399646]
+
+Mean absolute error >>> [0.11585740160104097]
+
+Cost >>> [0.0007832102277124779]
+
+object of study >>> ['Calculated tCO2e_per_m2']
+
+regularization param >>> [1]
+
+polynomial_exponents >>> 
+
+0  ones
+
+1  GIFA (m2) ^1
+
+2  GIFA (m2) ^2
+
+3  GIFA (m2) ^3
+
+4  Storeys ^1
+
+5  Storeys ^2
+
+6  Storeys ^3
+
+7  Typical Span (m) ^1
+
+8  Typical Span (m) ^2
+
+9  Typical Span (m) ^3
+
+10  Typ Qk (kN_per_m2) ^1
+
+11  Typ Qk (kN_per_m2) ^2
+
+12  Typ Qk (kN_per_m2) ^3
+
+theta_opt >>> 
+
+0  0.26526325386104976
+
+1  -0.08439222185294411
+
+2  0.07080401398677262
+
+3  -0.012196010273843799
+
+4  0.03734209113468283
+
+5  0.015357649275136147
+
+6  -0.003997501561195859
+
+7  0.08504247259961721
+
+8  -0.026193882040043186
+
+9  0.0015204712497950473
+
+10  0.030134450201288285
+
+11  0.023563356435744486
+
+12  -0.0041125224706675305
+
+Mean square error >>> [0.012531363643399646]
+
+Mean absolute error >>> [0.11585740160104097]
+
+Cost >>> [0.0007832102277124779]
+

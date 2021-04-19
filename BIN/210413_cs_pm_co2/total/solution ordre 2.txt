@@ -1,0 +1,16 @@
+object of study :  CO2eq
+regularization param :  1
+theta_opt : 
+ones [-0.0285255]
+GIFA ^1 [0.84893947]
+GIFA ^2 [0.03099469]
+STOREY ^1 [0.0243592]
+STOREY ^2 [0.00611946]
+SPAN ^1 [0.04499047]
+SPAN ^2 [-0.01933471]
+LOAD ^1 [0.03006262]
+LOAD ^2 [0.01654188]
+
+Mean square error:  0.01533962025343245
+Mean absolute error:  0.13320810963997842
+Cost:  0.0009587262658395281
