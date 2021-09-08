@@ -106,7 +106,7 @@ if display_plots or save_visu :
         plot_graph_adv(full_df, x, OUTPUT_NAMES[study],label_dict=id_dict, qual_features=STR_FEATURES,
                        new_folder_path=folder_path, plot=display_plots, reference=reference)
 
-if display_plots or save_visu:
+if display_plots or save_visu:      #TODO: insert this
     plot_comparative_results(y_te_study, prediction, figure_name=OUTPUT_NAMES[study],
                              folder=folder_path, plot=display_plots, reference=reference)
 

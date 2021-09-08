@@ -1,0 +1,52 @@
+"""
+1. SET MODEL FEATURES
+"""
+from model_structural_embodied_co2 import *
+mymodel = Model_Structural_Embodied_CO2()
+
+"""
+2. IMPORT DATA
+"""
+from data_preprocessing import *
+my_prep_data = data_preprocessing(mymodel)
+
+
+print("0", my_prep_data.string_dict_to_number_dict)
+print("1", my_prep_data.index_dict_from_csv())
+print("2", my_prep_data.split_X_Y_values())
+print("3", my_prep_data.build_dictionary())
+print("4", my_prep_data.string_dict_to_number_dict())
+print("5", my_prep_data.dataframe_from_feature(my_prep_data.Model_Structural_Embodied_CO2.x_features_str))
+print("6", my_prep_data.extract_X_y_df_from_dict())
+
+"""
+3. DATA DISPLAY
+"""
+from display_preprocessed import *
+#dict = my_data.string_dict_to_number_dict()
+#print("a", dict)
+
+my_matrix = matrix_display(my_prep_data)
+unit = my_matrix.preprocessed_data.Model_Structural_Embodied_CO2.tCO2e_per_m2
+#for x in my_matrix.preprocessed_data.Model_Structural_Embodied_CO2.x_features:
+#    my_matrix.plot_graph_adv(x, my_matrix.preprocessed_data.Model_Structural_Embodied_CO2.y_features[unit])
+
+print("7", my_matrix)
+print("8", my_matrix.preprocessed_data.delimiter)
+print("9", my_matrix.preprocessed_data.Model_Structural_Embodied_CO2.input_path)
+print(my_matrix.view_dataframe_from_dict(my_prep_data.string_dict_to_number_dict()))
+
+"""
+4. MAP DATA TO OBJECTIVE FUNCTION
+"""
+
+from data_processing import *
+
+my_proc_data = data_processing(my_prep_data)
+print("10", my_proc_data.power_dictionary())
+a,b = my_proc_data.create_polynomial_features()
+print("11", type(a), a.shape, a[1, :], a[:, 1])
+print("11", type(a), a.shape, a[-1, :], a[:, -1])
+
+print("11", type(b), b.shape, b[0, :], b[:, 0])
+print("11", type(b), b.shape, b[-1, :], b[:, -1])

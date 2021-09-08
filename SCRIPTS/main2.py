@@ -5,56 +5,36 @@ from model_structural_embodied_co2 import *
 mymodel = Model_Structural_Embodied_CO2()
 
 """
-2. IMPORT DATA
+2. PREPROCESS DATA
 """
 from data_preprocessing import *
 my_prep_data = data_preprocessing(mymodel)
 
-
-print("0", my_prep_data.string_dict_to_number_dict)
-print("1", my_prep_data.index_dict_from_csv())
-print("2", my_prep_data.separate_X_Y_values())
-print("3", my_prep_data.build_dictionary())
-print("4", my_prep_data.string_dict_to_number_dict())
-print("5", my_prep_data.dataframe_from_feature(my_prep_data.Model_Structural_Embodied_CO2.x_features_str))
-print("6", my_prep_data.full_model_dataframe())
-
 """
-3. DATA DISPLAY
+3. VISUALIZE DATA
 """
 from display_preprocessed import *
-#dict = my_data.string_dict_to_number_dict()
-#print("a", dict)
-
 my_matrix = matrix_display(my_prep_data)
-unit = my_matrix.preprocessed_data.Model_Structural_Embodied_CO2.tCO2e_per_m2
-
-
-
-
 #for x in my_matrix.preprocessed_data.Model_Structural_Embodied_CO2.x_features:
-#    my_matrix.plot_graph_adv(x, my_matrix.preprocessed_data.Model_Structural_Embodied_CO2.y_features[unit])
-
-#print("7", my_matrix)
-#print("8", my_matrix.preprocessed_data.delimiter)
-#print("9", my_matrix.preprocessed_data.Model_Structural_Embodied_CO2.input_path)
-print(my_matrix.view_dataframe_from_dict(my_prep_data.string_dict_to_number_dict()))
+#    my_matrix.plot_graph_adv(x, my_matrix.preprocessed_data.Model_Structural_Embodied_CO2.y_features[my_matrix.preprocessed_data.Model_Structural_Embodied_CO2.tCO2e_per_m2])
 
 """
 4. MAP DATA TO OBJECTIVE FUNCTION
 """
-
 from data_processing import *
-
 my_proc_data = data_processing(my_prep_data)
-print("10", my_proc_data.construct_power_dictionary())
-df,polf = my_proc_data.create_polynomial_features()
-print("df", df)
-print("polf", polf)
-#print("df", type(df), df.shape, "line", df[1, :], "col", df[:, 1])
-#print("df", type(df), df.shape, "line", df[-1, :], "col", df[:, -1])
-#print("polf", type(polf), polf.shape, "line", polf[0, :], "col", polf[:, 0])
-#print("polf", type(polf), polf.shape, "line", polf[-1, :], "col", polf[:, -1])
+polynomial_df = my_proc_data.create_polynomial_features()
+
+"""
+5. OPTIMIZE/RUN/EVALUATE OBJECTIVE FUNCTION
+"""
+from linear_regression import *
+my_linear_regression = linear_regression(my_proc_data)
+prediction = my_linear_regression.predict_footprint()
+mse = my_linear_regression.MSE()
+mae = my_linear_regression.MAE()
+cost = my_linear_regression.evaluate_cost()
+print(prediction, prediction.shape)
 
 
 """

@@ -1,60 +1,68 @@
-class data_preprocessing:
-    def __init__(self, my_model_features, x_names, y_names, first_line=5, delimiter=';'):
+from model_structural_embodied_co2 import *
+
+class data_preprocessing():
+
+    def __init__(self, Model_Structural_Embodied_CO2, first_line=5, delimiter=';'):
+
         #super().__init__() #TODO: ?
         self.delimiter = delimiter
         self.first_line = first_line
-        self.features = my_model_features
-        self.x_names = x_names
-        self.y_names = y_names
+        self.Model_Structural_Embodied_CO2 = Model_Structural_Embodied_CO2
+        self.unit = [self.Model_Structural_Embodied_CO2.y_features[self.Model_Structural_Embodied_CO2.tCO2e_per_m2]]
+        self.x_qual_df = self.dataframe_from_feature(self.Model_Structural_Embodied_CO2.x_features_str)
+        self.x_quant_df = self.dataframe_from_feature(self.Model_Structural_Embodied_CO2.x_features_int)
+        self.x_df = self.dataframe_from_feature(self.Model_Structural_Embodied_CO2.x_features)
+        self.y_df = self.dataframe_from_feature(self.unit)
 
     def open_csv_at_given_line(self):
         import csv
-        reader = csv.reader(open(self.features.input_path + '.csv', mode='r'), delimiter=self.delimiter)
+        reader = csv.reader(open(self.Model_Structural_Embodied_CO2.input_path + '.csv', mode='r'), delimiter=self.delimiter)
         for i in range(self.first_line):
             reader.__next__()
         header = reader.__next__()
         return header, reader
 
     def index_dict_from_csv(self):
-        header, reader = self.open_csv_at_given_line()  # TODO: parenthesis needed here?
+        header, reader = self.open_csv_at_given_line()
         CST = dict()
-        for f in self.features.FEATURES_NAMES:
+        for f in self.Model_Structural_Embodied_CO2.x_features:
             CST[f] = []
         for line in reader:
-            for f in self.features.FEATURES_NAMES:
+            for f in self.Model_Structural_Embodied_CO2.x_features:
                 index = header.index(f)
                 if line[index] not in CST[f]:
                     CST[f].append(line[index])
         return CST
 
-    def split_X_Y_values(self):
+    def separate_X_Y_values(self):
         header, reader = self.open_csv_at_given_line()
         X_values, Y_values = [], []
         for line in reader:
-            for (names, values) in [(self.x_names, X_values), (self.y_names, Y_values)]:
+            for (names, values) in [(self.Model_Structural_Embodied_CO2.x_features, X_values),
+                                    (self.Model_Structural_Embodied_CO2.y_features, Y_values)]:
                 values.append([line[header.index(name)] for name in names])
         return X_values, Y_values
         # line[header.index(name)] = value in that column
 
     def build_dictionary(self):  # TODO : shorten
         dico = dict()
-        X_values, Y_values = self.split_X_Y_values()
+        X_values, Y_values = self.separate_X_Y_values()
         for i in range(len(X_values[0])):  # 12
-            dico[self.features.FEATURES_NAMES[i]] = []
+            dico[self.Model_Structural_Embodied_CO2.x_features[i]] = []
         for i in range(len(Y_values[0])):  # 12
-            dico[self.features.OUTPUT_NAMES[i]] = []
+            dico[self.Model_Structural_Embodied_CO2.y_features[i]] = []
         for j in range(len(X_values)):  # 80
             for i in range(len(X_values[0])):  # 12
-                dico[self.features.FEATURES_NAMES[i]].append(X_values[j][i])
+                dico[self.Model_Structural_Embodied_CO2.x_features[i]].append(X_values[j][i])
             for k in range(len(Y_values[0])):
-                dico[self.features.OUTPUT_NAMES[k]].append(Y_values[j][k])
+                dico[self.Model_Structural_Embodied_CO2.y_features[k]].append(Y_values[j][k])
         return dico
 
-    def qualitative_str_feature_to_int(self, index_dictionary, feature_name, feature_value):
+    def remap_qual_feature_as_int(self, index_dictionary, feature_name, feature_value):
 
         return index_dictionary[feature_name].index(feature_value)
 
-    def quantitative_str_feature_to_float(self, string):
+    def format_str_feature_to_float(self, string):
         """
         input : decimal number in string with "," for decimal separation
         output : decimal number in float with "." for decimal separation
@@ -70,19 +78,19 @@ class data_preprocessing:
         number_dict = dict()
         index_dict = self.index_dict_from_csv()
         feature_dict = self.build_dictionary()
-        qualitative_features = self.features.STR_FEATURES
-        quantitative_features = self.features.INT_FEATURES + self.features.OUTPUT_NAMES
+        qualitative_features = self.Model_Structural_Embodied_CO2.x_features_str
+        quantitative_features = self.Model_Structural_Embodied_CO2.x_features_int + self.Model_Structural_Embodied_CO2.y_features
         for ql_feature in qualitative_features:
             number_dict[ql_feature] = []
             for ql_value in feature_dict[ql_feature]:
-                number_dict[ql_feature].append(self.qualitative_str_feature_to_int(index_dict, ql_feature, ql_value))
+                number_dict[ql_feature].append(self.remap_qual_feature_as_int(index_dict, ql_feature, ql_value))
         for qn_feature in quantitative_features:
             number_dict[qn_feature] = []
             for qn_value in feature_dict[qn_feature]:
-                number_dict[qn_feature].append(self.quantitative_str_feature_to_float(qn_value))
+                number_dict[qn_feature].append(self.format_str_feature_to_float(qn_value))
         return number_dict
 
-    def extract_feature_df_from_dict(self, feature_labels):
+    def dataframe_from_feature(self, feature_labels, scale = False):
         import numpy as np
         data_dict = self.string_dict_to_number_dict()
         num_samples = len(data_dict[feature_labels[0]])
@@ -90,16 +98,27 @@ class data_preprocessing:
         data = np.zeros((num_samples, num_features))
         for i in range(num_samples):  # 80
             data[i, :] = np.array([data_dict[f][i] for f in feature_labels])
+        if scale:
+            data = self.scale_features(data)
         return data
 
-    def extract_X_y_df_from_dict(self, scale_int=True):  # TODO : USELESS
+    def full_model_dataframe(self, scale_qual=True, scale_int=True, scale_y=True,):
 
-        x_qual_df = self.extract_feature_df_from_dict(self.features.STR_FEATURES)
-        x_quant_df = self.extract_feature_df_from_dict(self.features.INT_FEATURES)
+        x_qual_df = self.dataframe_from_feature(self.Model_Structural_Embodied_CO2.x_features_str)
+        x_quant_df = self.dataframe_from_feature(self.Model_Structural_Embodied_CO2.x_features_int)
+        y_df = self.dataframe_from_feature(self.Model_Structural_Embodied_CO2.y_features)
+        """
+        if scale_qual:
+            x_qual_df = self.scale_features(x_qual_df)
         if scale_int:
             x_quant_df = self.scale_features(x_quant_df)
-        y_df = self.extract_feature_df_from_dict(self.features.OUTPUT_NAMES)
+        if scale_y:
+            y_df = self.scale_features(y_df)"""
+
         return x_qual_df, x_quant_df, y_df
+
+    def x_qualitative_df(self, scale_int=True):
+        x_qual_df, x_quant_df, y_df = extract_X_y_df_from_dict
 
     def scale_features(self, X):
         import numpy as np
@@ -108,19 +127,3 @@ class data_preprocessing:
         return (X - x_bar) / x_std
 
 
-"""
-class data_preprocessing:
-    def __init__(self, first_line=5, delimiter=';'):
-        super().__init__()
-        self.str = model_features.STR_FEATURES
-        self.int = model_features.INT_FEATURES
-        self.features = model_features.FEATURES_NAMES
-        self.outputs = model_features.OUTPUT_NAMES
-        self.filename = model_features.input_path
-        self.delimiter = delimiter
-        self.first_line = first_line
-
-
-
-
-"""

@@ -1,0 +1,389 @@
+C:\Users\sfenton\Anaconda3\envs\ml_labs\python.exe C:/Users/sfenton/Code/Repositories/CO2footprint/SCRIPTS/main.py
+0 <bound method data_preprocessing.string_dict_to_number_dict of <data_preprocessing.data_preprocessing object at 0x00000212CE50FDF0>>
+1 {'Sector': ['Other', 'Residential', 'Cultural', 'Educational', 'Mixed Use', 'Commercial', 'Industrial'], 'Type': ['New Build (Brownfield)', 'New Build (Greenfield)', 'Mixed New Build/Refurb'], 'Basement': ['None', 'Partial Footprint', 'Full Footprint'], 'Foundations': ['Piled Ground Beams', 'Mass Pads/Strips', 'Raft', 'Piles (Pile Caps)', 'Reinforced Pads/Strips', ''], 'Ground Floor': ['Suspended RC', 'Ground Bearing RC', 'Suspended Precast', 'Raft', 'Other'], 'Superstructure': ['In-Situ RC', 'CLT Frame', 'Steel Frame, Precast', 'Masonry, Concrete', 'Steel Frame, Composite', 'Steel Frame, Other', 'Masonry, Timber', 'Other', 'Timber Frame', 'Steel Frame, Timber'], 'Cladding': ['Masonry + SFS', 'Lightweight Only', 'Stone + Masonry', 'Glazed/Curtain Wall', 'Masonry Only', 'Stone + SFS', 'Other', 'Lightweight + SFS', 'Timber + SFS', 'Timber Only'], 'BREEAM Rating': ['Unknown', 'Very Good', 'Excellent', 'Good', 'Passivhaus', 'Outstanding'], 'GIFA (m2)': ['4631', '4640', '742', '1534', '7284', '4180', '15145', '4500', '3900', '1724', '2772', '904', '1050', '1555', '8118', '1874', '1305', '2349', '7755', '2100', '15985', '3932', '3460', '11500', '9483', '31774', '2276', '220', '1311', '11736', '7922', '544', '5620', '1712', '37115', '14029', '1360', '1154', '862', '3499', '10108', '9862', '1290', '5428', '125', '19512', '2395', '10220', '5500', '1729', '2054', '1210', '2769', '3600', '2400', '746', '810', '648', '500', '1100', '1900', '3023', '867', '21500', '3997', '3657', '1830', '517', '1643', '2368', '2404', '1930', '8748', '1163', '2575', '4787', '3851', '307', '340'], 'Storeys': ['3', '7', '2', '6', '5', '10', '4', '1', '9', '8', '19', '17', '24'], 'Typical Span (m)': ['7,00', '4,00', '2,50', '7,50', '4,50', '6,50', '8,00', '3,00', '6,00', '45,00', '5,74', '5,00', '6,40', '7,20', '8,10', '7,80', '0,00', '3,50', '35,00', '2,90', '5,05', '3,20', '8,50', '15,00', '5,50', '12,00', '3,85', '6,24', '20,50'], 'Typ Qk (kN_per_m2)': ['4,00', '2,50', '3,00', '0,75', '5,00', '3,50', '2,00', '1,50', '10,00', '5,50', '0,85']}
+2 ([['Other', 'New Build (Brownfield)', 'None', 'Piled Ground Beams', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Unknown', '4631', '3', '7,00', '4,00'], ['Residential', 'New Build (Brownfield)', 'None', 'Mass Pads/Strips', 'Suspended RC', 'CLT Frame', 'Lightweight Only', 'Unknown', '4640', '7', '4,00', '2,50'], ['Cultural', 'New Build (Brownfield)', 'None', 'Mass Pads/Strips', 'Suspended RC', 'Steel Frame, Precast', 'Masonry + SFS', 'Very Good', '742', '3', '2,50', '4,00'], ['Residential', 'New Build (Greenfield)', 'Partial Footprint', 'Raft', 'Suspended RC', 'Masonry, Concrete', 'Stone + Masonry', 'Unknown', '1534', '2', '7,00', '2,50'], ['Residential', 'New Build (Brownfield)', 'None', 'Mass Pads/Strips', 'Ground Bearing RC', 'In-Situ RC', 'Masonry + SFS', 'Unknown', '7284', '6', '7,50', '2,50'], ['Educational', 'New Build (Greenfield)', 'Partial Footprint', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Stone + Masonry', 'Unknown', '4180', '5', '4,50', '3,00'], ['Residential', 'New Build (Brownfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Unknown', '15145', '10', '7,50', '2,50'], ['Residential', 'New Build (Brownfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Unknown', '4500', '6', '6,50', '2,50'], ['Mixed Use', 'New Build (Brownfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Unknown', '3900', '6', '7,00', '2,50'], ['Educational', 'New Build (Brownfield)', 'None', 'Piled Ground Beams', 'Suspended RC', 'Steel Frame, Composite', 'Masonry + SFS', 'Very Good', '1724', '2', '4,00', '2,50'], ['Commercial', 'New Build (Brownfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'Steel Frame, Composite', 'Glazed/Curtain Wall', 'Unknown', '2772', '4', '8,00', '3,00'], ['Educational', 'New Build (Greenfield)', 'None', 'Piled Ground Beams', 'Suspended Precast', 'Steel Frame, Other', 'Stone + Masonry', 'Unknown', '904', '1', '3,00', '2,50'], ['Cultural', 'New Build (Greenfield)', 'None', 'Mass Pads/Strips', 'Ground Bearing RC', 'Masonry, Timber', 'Masonry Only', 'Unknown', '1050', '1', '3,00', '0,75'], ['Educational', 'New Build (Brownfield)', 'Partial Footprint', 'Piled Ground Beams', 'Suspended RC', 'CLT Frame', 'Masonry Only', 'Very Good', '1555', '4', '7,00', '4,00'], ['Educational', 'New Build (Brownfield)', 'Partial Footprint', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Lightweight Only', 'Excellent', '8118', '4', '6,00', '5,00'], ['Educational', 'New Build (Brownfield)', 'None', 'Mass Pads/Strips', 'Ground Bearing RC', 'CLT Frame', 'Masonry Only', 'Unknown', '1874', '2', '6,00', '4,00'], ['Residential', 'New Build (Brownfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry Only', 'Unknown', '1305', '5', '4,00', '2,50'], ['Educational', 'New Build (Brownfield)', 'Full Footprint', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Unknown', '2349', '9', '7,00', '5,00'], ['Educational', 'New Build (Brownfield)', 'None', 'Piled Ground Beams', 'Suspended RC', 'Steel Frame, Precast', 'Masonry + SFS', 'Unknown', '7755', '3', '7,50', '4,00'], ['Educational', 'New Build (Brownfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'Steel Frame, Other', 'Masonry Only', 'Very Good', '2100', '1', '6,50', '3,00'], ['Educational', 'New Build (Brownfield)', 'None', 'Mass Pads/Strips', 'Ground Bearing RC', 'Steel Frame, Composite', 'Masonry + SFS', 'Unknown', '15985', '2', '45,00', '5,00'], ['Residential', 'New Build (Brownfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Very Good', '3932', '4', '5,74', '2,50'], ['Educational', 'New Build (Brownfield)', 'None', 'Piled Ground Beams', 'Suspended RC', 'CLT Frame', 'Masonry Only', 'Unknown', '3460', '2', '4,00', '4,00'], ['Mixed Use', 'New Build (Brownfield)', 'None', 'Piled Ground Beams', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Very Good', '11500', '7', '6,00', '2,50'], ['Residential', 'New Build (Brownfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Very Good', '9483', '8', '5,00', '2,50'], ['Residential', 'New Build (Brownfield)', 'Full Footprint', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Stone + SFS', 'Unknown', '31774', '19', '8,00', '2,50'], ['Mixed Use', 'New Build (Brownfield)', 'Full Footprint', 'Raft', 'Raft', 'Other', 'Stone + Masonry', 'Unknown', '2276', '7', '6,40', '3,50'], ['Educational', 'New Build (Brownfield)', 'None', 'Piled Ground Beams', 'Suspended RC', 'Masonry, Timber', 'Masonry Only', 'Unknown', '220', '1', '5,00', '3,00'], ['Educational', 'Mixed New Build/Refurb', 'None', 'Mass Pads/Strips', 'Suspended RC', 'Steel Frame, Composite', 'Glazed/Curtain Wall', 'Unknown', '1311', '2', '6,50', '3,00'], ['Educational', 'New Build (Brownfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'Steel Frame, Composite', 'Masonry + SFS', 'Excellent', '11736', '4', '7,20', '4,00'], ['Commercial', 'New Build (Brownfield)', 'Full Footprint', 'Raft', 'Suspended RC', 'In-Situ RC', 'Stone + Masonry', 'Unknown', '7922', '7', '6,00', '3,00'], ['Residential', 'New Build (Brownfield)', 'None', 'Piled Ground Beams', 'Other', 'Masonry, Timber', 'Masonry Only', 'Unknown', '544', '3', '4,50', '2,50'], ['Cultural', 'New Build (Brownfield)', 'Full Footprint', 'Piles (Pile Caps)', 'Suspended RC', 'Timber Frame', 'Masonry Only', 'Excellent', '5620', '1', '8,10', '5,00'], ['Commercial', 'New Build (Brownfield)', 'Full Footprint', 'Piled Ground Beams', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Unknown', '1712', '6', '7,80', '4,00'], ['Residential', 'New Build (Brownfield)', 'Full Footprint', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Unknown', '37115', '17', '7,50', '2,50'], ['Mixed Use', 'New Build (Brownfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Unknown', '14029', '24', '7,50', '2,50'], ['Residential', 'New Build (Brownfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Other', 'Unknown', '1360', '3', '4,00', '2,00'], ['Residential', 'New Build (Brownfield)', 'Full Footprint', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry Only', 'Unknown', '1154', '4', '7,50', '2,50'], ['Residential', 'New Build (Brownfield)', 'None', 'Piled Ground Beams', 'Suspended RC', 'Steel Frame, Timber', 'Masonry Only', 'Unknown', '862', '3', '0,00', '3,00'], ['Cultural', 'New Build (Greenfield)', 'Partial Footprint', 'Piled Ground Beams', 'Suspended Precast', 'Steel Frame, Precast', 'Masonry Only', 'Unknown', '3499', '6', '6,00', '4,00'], ['Residential', 'New Build (Brownfield)', 'Full Footprint', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Unknown', '10108', '4', '7,50', '2,50'], ['Educational', 'New Build (Brownfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry Only', 'Good', '9862', '3', '8,00', '4,00'], ['Educational', 'New Build (Brownfield)', 'None', 'Piled Ground Beams', 'Suspended RC', 'Steel Frame, Precast', 'Masonry + SFS', 'Unknown', '1290', '3', '3,50', '5,00'], ['Educational', 'New Build (Greenfield)', 'None', 'Mass Pads/Strips', 'Ground Bearing RC', 'Steel Frame, Composite', 'Lightweight + SFS', 'Unknown', '5428', '3', '35,00', '3,50'], ['Residential', 'New Build (Brownfield)', 'None', 'Piled Ground Beams', 'Suspended RC', 'Steel Frame, Composite', 'Stone + Masonry', 'Unknown', '125', '5', '2,90', '1,50'], ['Residential', 'New Build (Greenfield)', 'Full Footprint', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Unknown', '19512', '6', '5,00', '2,50'], ['Residential', 'New Build (Brownfield)', 'Partial Footprint', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Unknown', '2395', '5', '6,50', '2,50'], ['Educational', 'New Build (Brownfield)', 'None', 'Reinforced Pads/Strips', 'Ground Bearing RC', 'CLT Frame', 'Timber + SFS', 'Passivhaus', '10220', '4', '7,00', '4,00'], ['Other', 'New Build (Greenfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry Only', 'Excellent', '5500', '9', '6,00', '10,00'], ['Other', 'New Build (Brownfield)', 'Partial Footprint', 'Piles (Pile Caps)', 'Ground Bearing RC', 'Steel Frame, Composite', 'Masonry + SFS', 'Unknown', '1729', '3', '7,20', '5,00'], ['Educational', 'New Build (Brownfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'Steel Frame, Precast', 'Masonry + SFS', 'Unknown', '2054', '3', '7,50', '5,00'], ['Commercial', 'New Build (Greenfield)', 'None', 'Raft', 'Raft', 'In-Situ RC', 'Timber Only', 'Passivhaus', '1210', '3', '5,05', '3,50'], ['Educational', 'New Build (Brownfield)', 'None', 'Mass Pads/Strips', 'Suspended RC', 'CLT Frame', 'Other', 'Unknown', '2769', '3', '7,20', '1,50'], ['Educational', 'New Build (Brownfield)', 'None', 'Raft', 'Raft', 'In-Situ RC', 'Masonry + SFS', 'Very Good', '3600', '3', '7,20', '4,00'], ['Residential', 'New Build (Greenfield)', 'None', 'Piled Ground Beams', 'Suspended RC', 'Masonry, Concrete', 'Masonry + SFS', 'Unknown', '2400', '3', '3,20', '1,50'], ['Educational', 'New Build (Greenfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Glazed/Curtain Wall', 'Unknown', '746', '3', '8,50', '4,00'], ['Residential', 'Mixed New Build/Refurb', 'Full Footprint', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry Only', 'Unknown', '810', '4', '6,00', '2,50'], ['Residential', 'New Build (Brownfield)', 'None', 'Piled Ground Beams', 'Suspended Precast', 'Masonry, Timber', 'Stone + Masonry', 'Unknown', '648', '2', '4,00', '2,50'], ['Mixed Use', 'New Build (Greenfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Glazed/Curtain Wall', 'Unknown', '500', '2', '15,00', '3,50'], ['Mixed Use', 'New Build (Greenfield)', 'None', '', 'Suspended Precast', 'Steel Frame, Timber', 'Masonry + SFS', 'Unknown', '1100', '2', '5,50', '3,50'], ['Educational', 'New Build (Brownfield)', 'Full Footprint', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Unknown', '1900', '4', '7,00', '4,00'], ['Other', 'New Build (Brownfield)', 'Partial Footprint', 'Piles (Pile Caps)', 'Suspended RC', 'Steel Frame, Precast', 'Glazed/Curtain Wall', 'Excellent', '1900', '3', '6,00', '3,00'], ['Residential', 'New Build (Brownfield)', 'None', 'Mass Pads/Strips', 'Suspended RC', 'In-Situ RC', 'Masonry Only', 'Unknown', '3023', '3', '5,00', '2,50'], ['Residential', 'New Build (Greenfield)', 'Full Footprint', 'Raft', 'Suspended RC', 'Steel Frame, Other', 'Masonry Only', 'Unknown', '867', '4', '6,00', '1,50'], ['Residential', 'New Build (Brownfield)', 'Partial Footprint', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Unknown', '21500', '6', '7,20', '2,50'], ['Residential', 'New Build (Brownfield)', 'Partial Footprint', 'Raft', 'Raft', 'CLT Frame', 'Masonry Only', 'Unknown', '3997', '3', '4,50', '2,50'], ['Industrial', 'New Build (Greenfield)', 'None', 'Reinforced Pads/Strips', 'Ground Bearing RC', 'Steel Frame, Composite', 'Lightweight + SFS', 'Unknown', '3657', '2', '12,00', '4,00'], ['Residential', 'Mixed New Build/Refurb', 'Full Footprint', 'Piled Ground Beams', 'Suspended RC', 'In-Situ RC', 'Stone + Masonry', 'Unknown', '1830', '3', '6,50', '2,50'], ['Residential', 'New Build (Greenfield)', 'None', 'Mass Pads/Strips', 'Suspended Precast', 'Masonry, Concrete', 'Masonry Only', 'Unknown', '517', '3', '3,20', '1,50'], ['Commercial', 'New Build (Brownfield)', 'None', 'Piled Ground Beams', 'Suspended RC', 'Steel Frame, Composite', 'Masonry + SFS', 'Unknown', '1643', '3', '3,85', '3,00'], ['Commercial', 'New Build (Brownfield)', 'None', 'Mass Pads/Strips', 'Ground Bearing RC', 'Steel Frame, Precast', 'Masonry + SFS', 'Unknown', '2368', '4', '7,50', '2,50'], ['Residential', 'New Build (Greenfield)', 'None', 'Piles (Pile Caps)', 'Suspended RC', 'In-Situ RC', 'Stone + Masonry', 'Unknown', '2404', '3', '6,50', '2,50'], ['Educational', 'New Build (Greenfield)', 'None', 'Mass Pads/Strips', 'Ground Bearing RC', 'In-Situ RC', 'Masonry Only', 'Outstanding', '1930', '3', '5,50', '1,50'], ['Residential', 'New Build (Brownfield)', 'None', 'Piled Ground Beams', 'Suspended RC', 'In-Situ RC', 'Masonry Only', 'Unknown', '8748', '7', '6,00', '2,50'], ['Commercial', 'New Build (Brownfield)', 'None', 'Mass Pads/Strips', 'Ground Bearing RC', 'Steel Frame, Precast', 'Lightweight + SFS', 'Unknown', '1163', '1', '6,24', '5,50'], ['Other', 'New Build (Brownfield)', 'Full Footprint', 'Mass Pads/Strips', 'Suspended RC', 'Steel Frame, Precast', 'Lightweight + SFS', 'Unknown', '2575', '4', '7,50', '4,00'], ['Residential', 'New Build (Brownfield)', 'None', 'Piled Ground Beams', 'Suspended RC', 'In-Situ RC', 'Masonry + SFS', 'Unknown', '4787', '6', '6,00', '2,50'], ['Industrial', 'New Build (Greenfield)', 'None', 'Mass Pads/Strips', 'Ground Bearing RC', 'Steel Frame, Composite', 'Lightweight + SFS', 'Unknown', '3851', '1', '20,50', '0,85'], ['Residential', 'New Build (Greenfield)', 'None', 'Mass Pads/Strips', 'Ground Bearing RC', 'Timber Frame', 'Timber Only', 'Unknown', '307', '2', '4,00', '1,50'], ['Residential', 'New Build (Brownfield)', 'Partial Footprint', 'Mass Pads/Strips', 'Suspended RC', 'In-Situ RC', 'Other', 'Unknown', '340', '2', '6,50', '2,50']], [['1179,8', '0,255'], ['881,9', '0,190'], ['149,6', '0,202'], ['424,5', '0,277'], ['1896,3', '0,260'], ['1529,8', '0,366'], ['4057,8', '0,268'], ['1007,2', '0,224'], ['1141,9', '0,293'], ['536,7', '0,311'], ['976,0', '0,352'], ['336,0', '0,372'], ['316,8', '0,302'], ['337,3', '0,217'], ['2493,9', '0,307'], ['524,9', '0,280'], ['278,8', '0,214'], ['1758,9', '0,749'], ['1490,2', '0,192'], ['408,6', '0,195'], ['3602,3', '0,225'], ['1549,5', '0,394'], ['930,4', '0,269'], ['2370,2', '0,206'], ['2166,3', '0,228'], ['10354,2', '0,326'], ['591,0', '0,260'], ['69,4', '0,316'], ['294,2', '0,224'], ['3346,6', '0,285'], ['2080,9', '0,263'], ['83,9', '0,154'], ['1726,0', '0,307'], ['703,5', '0,411'], ['10784,6', '0,291'], ['4310,1', '0,307'], ['530,8', '0,390'], ['651,8', '0,565'], ['186,8', '0,217'], ['818,9', '0,234'], ['3964,2', '0,392'], ['3164,2', '0,321'], ['498,4', '0,386'], ['914,3', '0,168'], ['36,1', '0,289'], ['6364,4', '0,326'], ['650,1', '0,271'], ['2670,9', '0,261'], ['2784,9', '0,506'], ['813,8', '0,471'], ['399,3', '0,194'], ['385,3', '0,318'], ['584,7', '0,211'], ['880,8', '0,245'], ['435,0', '0,181'], ['302,6', '0,406'], ['266,7', '0,329'], ['202,6', '0,313'], ['320,9', '0,642'], ['257,1', '0,234'], ['711,5', '0,374'], ['763,4', '0,402'], ['641,1', '0,212'], ['276,1', '0,318'], ['6564,9', '0,305'], ['472,2', '0,118'], ['747,3', '0,204'], ['1380,9', '0,755'], ['104,1', '0,201'], ['376,0', '0,229'], ['519,2', '0,219'], ['822,4', '0,342'], ['578,3', '0,300'], ['2480,7', '0,284'], ['246,9', '0,212'], ['493,9', '0,192'], ['1169,0', '0,244'], ['727,8', '0,189'], ['51,0', '0,166'], ['70,1', '0,206']])
+3 {'Sector': ['Other', 'Residential', 'Cultural', 'Residential', 'Residential', 'Educational', 'Residential', 'Residential', 'Mixed Use', 'Educational', 'Commercial', 'Educational', 'Cultural', 'Educational', 'Educational', 'Educational', 'Residential', 'Educational', 'Educational', 'Educational', 'Educational', 'Residential', 'Educational', 'Mixed Use', 'Residential', 'Residential', 'Mixed Use', 'Educational', 'Educational', 'Educational', 'Commercial', 'Residential', 'Cultural', 'Commercial', 'Residential', 'Mixed Use', 'Residential', 'Residential', 'Residential', 'Cultural', 'Residential', 'Educational', 'Educational', 'Educational', 'Residential', 'Residential', 'Residential', 'Educational', 'Other', 'Other', 'Educational', 'Commercial', 'Educational', 'Educational', 'Residential', 'Educational', 'Residential', 'Residential', 'Mixed Use', 'Mixed Use', 'Educational', 'Other', 'Residential', 'Residential', 'Residential', 'Residential', 'Industrial', 'Residential', 'Residential', 'Commercial', 'Commercial', 'Residential', 'Educational', 'Residential', 'Commercial', 'Other', 'Residential', 'Industrial', 'Residential', 'Residential'], 'Type': ['New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Greenfield)', 'New Build (Brownfield)', 'New Build (Greenfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Greenfield)', 'New Build (Greenfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'Mixed New Build/Refurb', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Greenfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Greenfield)', 'New Build (Brownfield)', 'New Build (Greenfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Greenfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Greenfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Greenfield)', 'New Build (Greenfield)', 'Mixed New Build/Refurb', 'New Build (Brownfield)', 'New Build (Greenfield)', 'New Build (Greenfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Greenfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Greenfield)', 'Mixed New Build/Refurb', 'New Build (Greenfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Greenfield)', 'New Build (Greenfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Brownfield)', 'New Build (Greenfield)', 'New Build (Greenfield)', 'New Build (Brownfield)'], 'Basement': ['None', 'None', 'None', 'Partial Footprint', 'None', 'Partial Footprint', 'None', 'None', 'None', 'None', 'None', 'None', 'None', 'Partial Footprint', 'Partial Footprint', 'None', 'None', 'Full Footprint', 'None', 'None', 'None', 'None', 'None', 'None', 'None', 'Full Footprint', 'Full Footprint', 'None', 'None', 'None', 'Full Footprint', 'None', 'Full Footprint', 'Full Footprint', 'Full Footprint', 'None', 'None', 'Full Footprint', 'None', 'Partial Footprint', 'Full Footprint', 'None', 'None', 'None', 'None', 'Full Footprint', 'Partial Footprint', 'None', 'None', 'Partial Footprint', 'None', 'None', 'None', 'None', 'None', 'None', 'Full Footprint', 'None', 'None', 'None', 'Full Footprint', 'Partial Footprint', 'None', 'Full Footprint', 'Partial Footprint', 'Partial Footprint', 'None', 'Full Footprint', 'None', 'None', 'None', 'None', 'None', 'None', 'None', 'Full Footprint', 'None', 'None', 'None', 'Partial Footprint'], 'Foundations': ['Piled Ground Beams', 'Mass Pads/Strips', 'Mass Pads/Strips', 'Raft', 'Mass Pads/Strips', 'Piles (Pile Caps)', 'Piles (Pile Caps)', 'Piles (Pile Caps)', 'Piles (Pile Caps)', 'Piled Ground Beams', 'Piles (Pile Caps)', 'Piled Ground Beams', 'Mass Pads/Strips', 'Piled Ground Beams', 'Piles (Pile Caps)', 'Mass Pads/Strips', 'Piles (Pile Caps)', 'Piles (Pile Caps)', 'Piled Ground Beams', 'Piles (Pile Caps)', 'Mass Pads/Strips', 'Piles (Pile Caps)', 'Piled Ground Beams', 'Piled Ground Beams', 'Piles (Pile Caps)', 'Piles (Pile Caps)', 'Raft', 'Piled Ground Beams', 'Mass Pads/Strips', 'Piles (Pile Caps)', 'Raft', 'Piled Ground Beams', 'Piles (Pile Caps)', 'Piled Ground Beams', 'Piles (Pile Caps)', 'Piles (Pile Caps)', 'Piles (Pile Caps)', 'Piles (Pile Caps)', 'Piled Ground Beams', 'Piled Ground Beams', 'Piles (Pile Caps)', 'Piles (Pile Caps)', 'Piled Ground Beams', 'Mass Pads/Strips', 'Piled Ground Beams', 'Piles (Pile Caps)', 'Piles (Pile Caps)', 'Reinforced Pads/Strips', 'Piles (Pile Caps)', 'Piles (Pile Caps)', 'Piles (Pile Caps)', 'Raft', 'Mass Pads/Strips', 'Raft', 'Piled Ground Beams', 'Piles (Pile Caps)', 'Piles (Pile Caps)', 'Piled Ground Beams', 'Piles (Pile Caps)', '', 'Piles (Pile Caps)', 'Piles (Pile Caps)', 'Mass Pads/Strips', 'Raft', 'Piles (Pile Caps)', 'Raft', 'Reinforced Pads/Strips', 'Piled Ground Beams', 'Mass Pads/Strips', 'Piled Ground Beams', 'Mass Pads/Strips', 'Piles (Pile Caps)', 'Mass Pads/Strips', 'Piled Ground Beams', 'Mass Pads/Strips', 'Mass Pads/Strips', 'Piled Ground Beams', 'Mass Pads/Strips', 'Mass Pads/Strips', 'Mass Pads/Strips'], 'Ground Floor': ['Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Ground Bearing RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended Precast', 'Ground Bearing RC', 'Suspended RC', 'Suspended RC', 'Ground Bearing RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Ground Bearing RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Raft', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Other', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended Precast', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Ground Bearing RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Ground Bearing RC', 'Suspended RC', 'Ground Bearing RC', 'Suspended RC', 'Raft', 'Suspended RC', 'Raft', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended Precast', 'Suspended RC', 'Suspended Precast', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Suspended RC', 'Raft', 'Ground Bearing RC', 'Suspended RC', 'Suspended Precast', 'Suspended RC', 'Ground Bearing RC', 'Suspended RC', 'Ground Bearing RC', 'Suspended RC', 'Ground Bearing RC', 'Suspended RC', 'Suspended RC', 'Ground Bearing RC', 'Ground Bearing RC', 'Suspended RC'], 'Superstructure': ['In-Situ RC', 'CLT Frame', 'Steel Frame, Precast', 'Masonry, Concrete', 'In-Situ RC', 'In-Situ RC', 'In-Situ RC', 'In-Situ RC', 'In-Situ RC', 'Steel Frame, Composite', 'Steel Frame, Composite', 'Steel Frame, Other', 'Masonry, Timber', 'CLT Frame', 'In-Situ RC', 'CLT Frame', 'In-Situ RC', 'In-Situ RC', 'Steel Frame, Precast', 'Steel Frame, Other', 'Steel Frame, Composite', 'In-Situ RC', 'CLT Frame', 'In-Situ RC', 'In-Situ RC', 'In-Situ RC', 'Other', 'Masonry, Timber', 'Steel Frame, Composite', 'Steel Frame, Composite', 'In-Situ RC', 'Masonry, Timber', 'Timber Frame', 'In-Situ RC', 'In-Situ RC', 'In-Situ RC', 'In-Situ RC', 'In-Situ RC', 'Steel Frame, Timber', 'Steel Frame, Precast', 'In-Situ RC', 'In-Situ RC', 'Steel Frame, Precast', 'Steel Frame, Composite', 'Steel Frame, Composite', 'In-Situ RC', 'In-Situ RC', 'CLT Frame', 'In-Situ RC', 'Steel Frame, Composite', 'Steel Frame, Precast', 'In-Situ RC', 'CLT Frame', 'In-Situ RC', 'Masonry, Concrete', 'In-Situ RC', 'In-Situ RC', 'Masonry, Timber', 'In-Situ RC', 'Steel Frame, Timber', 'In-Situ RC', 'Steel Frame, Precast', 'In-Situ RC', 'Steel Frame, Other', 'In-Situ RC', 'CLT Frame', 'Steel Frame, Composite', 'In-Situ RC', 'Masonry, Concrete', 'Steel Frame, Composite', 'Steel Frame, Precast', 'In-Situ RC', 'In-Situ RC', 'In-Situ RC', 'Steel Frame, Precast', 'Steel Frame, Precast', 'In-Situ RC', 'Steel Frame, Composite', 'Timber Frame', 'In-Situ RC'], 'Cladding': ['Masonry + SFS', 'Lightweight Only', 'Masonry + SFS', 'Stone + Masonry', 'Masonry + SFS', 'Stone + Masonry', 'Masonry + SFS', 'Masonry + SFS', 'Masonry + SFS', 'Masonry + SFS', 'Glazed/Curtain Wall', 'Stone + Masonry', 'Masonry Only', 'Masonry Only', 'Lightweight Only', 'Masonry Only', 'Masonry Only', 'Masonry + SFS', 'Masonry + SFS', 'Masonry Only', 'Masonry + SFS', 'Masonry + SFS', 'Masonry Only', 'Masonry + SFS', 'Masonry + SFS', 'Stone + SFS', 'Stone + Masonry', 'Masonry Only', 'Glazed/Curtain Wall', 'Masonry + SFS', 'Stone + Masonry', 'Masonry Only', 'Masonry Only', 'Masonry + SFS', 'Masonry + SFS', 'Masonry + SFS', 'Other', 'Masonry Only', 'Masonry Only', 'Masonry Only', 'Masonry + SFS', 'Masonry Only', 'Masonry + SFS', 'Lightweight + SFS', 'Stone + Masonry', 'Masonry + SFS', 'Masonry + SFS', 'Timber + SFS', 'Masonry Only', 'Masonry + SFS', 'Masonry + SFS', 'Timber Only', 'Other', 'Masonry + SFS', 'Masonry + SFS', 'Glazed/Curtain Wall', 'Masonry Only', 'Stone + Masonry', 'Glazed/Curtain Wall', 'Masonry + SFS', 'Masonry + SFS', 'Glazed/Curtain Wall', 'Masonry Only', 'Masonry Only', 'Masonry + SFS', 'Masonry Only', 'Lightweight + SFS', 'Stone + Masonry', 'Masonry Only', 'Masonry + SFS', 'Masonry + SFS', 'Stone + Masonry', 'Masonry Only', 'Masonry Only', 'Lightweight + SFS', 'Lightweight + SFS', 'Masonry + SFS', 'Lightweight + SFS', 'Timber Only', 'Other'], 'BREEAM Rating': ['Unknown', 'Unknown', 'Very Good', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Very Good', 'Unknown', 'Unknown', 'Unknown', 'Very Good', 'Excellent', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Very Good', 'Unknown', 'Very Good', 'Unknown', 'Very Good', 'Very Good', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Excellent', 'Unknown', 'Unknown', 'Excellent', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Good', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Passivhaus', 'Excellent', 'Unknown', 'Unknown', 'Passivhaus', 'Unknown', 'Very Good', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Excellent', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Outstanding', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown', 'Unknown'], 'GIFA (m2)': ['4631', '4640', '742', '1534', '7284', '4180', '15145', '4500', '3900', '1724', '2772', '904', '1050', '1555', '8118', '1874', '1305', '2349', '7755', '2100', '15985', '3932', '3460', '11500', '9483', '31774', '2276', '220', '1311', '11736', '7922', '544', '5620', '1712', '37115', '14029', '1360', '1154', '862', '3499', '10108', '9862', '1290', '5428', '125', '19512', '2395', '10220', '5500', '1729', '2054', '1210', '2769', '3600', '2400', '746', '810', '648', '500', '1100', '1900', '1900', '3023', '867', '21500', '3997', '3657', '1830', '517', '1643', '2368', '2404', '1930', '8748', '1163', '2575', '4787', '3851', '307', '340'], 'Storeys': ['3', '7', '3', '2', '6', '5', '10', '6', '6', '2', '4', '1', '1', '4', '4', '2', '5', '9', '3', '1', '2', '4', '2', '7', '8', '19', '7', '1', '2', '4', '7', '3', '1', '6', '17', '24', '3', '4', '3', '6', '4', '3', '3', '3', '5', '6', '5', '4', '9', '3', '3', '3', '3', '3', '3', '3', '4', '2', '2', '2', '4', '3', '3', '4', '6', '3', '2', '3', '3', '3', '4', '3', '3', '7', '1', '4', '6', '1', '2', '2'], 'Typical Span (m)': ['7,00', '4,00', '2,50', '7,00', '7,50', '4,50', '7,50', '6,50', '7,00', '4,00', '8,00', '3,00', '3,00', '7,00', '6,00', '6,00', '4,00', '7,00', '7,50', '6,50', '45,00', '5,74', '4,00', '6,00', '5,00', '8,00', '6,40', '5,00', '6,50', '7,20', '6,00', '4,50', '8,10', '7,80', '7,50', '7,50', '4,00', '7,50', '0,00', '6,00', '7,50', '8,00', '3,50', '35,00', '2,90', '5,00', '6,50', '7,00', '6,00', '7,20', '7,50', '5,05', '7,20', '7,20', '3,20', '8,50', '6,00', '4,00', '15,00', '5,50', '7,00', '6,00', '5,00', '6,00', '7,20', '4,50', '12,00', '6,50', '3,20', '3,85', '7,50', '6,50', '5,50', '6,00', '6,24', '7,50', '6,00', '20,50', '4,00', '6,50'], 'Typ Qk (kN_per_m2)': ['4,00', '2,50', '4,00', '2,50', '2,50', '3,00', '2,50', '2,50', '2,50', '2,50', '3,00', '2,50', '0,75', '4,00', '5,00', '4,00', '2,50', '5,00', '4,00', '3,00', '5,00', '2,50', '4,00', '2,50', '2,50', '2,50', '3,50', '3,00', '3,00', '4,00', '3,00', '2,50', '5,00', '4,00', '2,50', '2,50', '2,00', '2,50', '3,00', '4,00', '2,50', '4,00', '5,00', '3,50', '1,50', '2,50', '2,50', '4,00', '10,00', '5,00', '5,00', '3,50', '1,50', '4,00', '1,50', '4,00', '2,50', '2,50', '3,50', '3,50', '4,00', '3,00', '2,50', '1,50', '2,50', '2,50', '4,00', '2,50', '1,50', '3,00', '2,50', '2,50', '1,50', '2,50', '5,50', '4,00', '2,50', '0,85', '1,50', '2,50'], 'Calculated Total tCO2e': ['1179,8', '881,9', '149,6', '424,5', '1896,3', '1529,8', '4057,8', '1007,2', '1141,9', '536,7', '976,0', '336,0', '316,8', '337,3', '2493,9', '524,9', '278,8', '1758,9', '1490,2', '408,6', '3602,3', '1549,5', '930,4', '2370,2', '2166,3', '10354,2', '591,0', '69,4', '294,2', '3346,6', '2080,9', '83,9', '1726,0', '703,5', '10784,6', '4310,1', '530,8', '651,8', '186,8', '818,9', '3964,2', '3164,2', '498,4', '914,3', '36,1', '6364,4', '650,1', '2670,9', '2784,9', '813,8', '399,3', '385,3', '584,7', '880,8', '435,0', '302,6', '266,7', '202,6', '320,9', '257,1', '711,5', '763,4', '641,1', '276,1', '6564,9', '472,2', '747,3', '1380,9', '104,1', '376,0', '519,2', '822,4', '578,3', '2480,7', '246,9', '493,9', '1169,0', '727,8', '51,0', '70,1'], 'Calculated tCO2e_per_m2': ['0,255', '0,190', '0,202', '0,277', '0,260', '0,366', '0,268', '0,224', '0,293', '0,311', '0,352', '0,372', '0,302', '0,217', '0,307', '0,280', '0,214', '0,749', '0,192', '0,195', '0,225', '0,394', '0,269', '0,206', '0,228', '0,326', '0,260', '0,316', '0,224', '0,285', '0,263', '0,154', '0,307', '0,411', '0,291', '0,307', '0,390', '0,565', '0,217', '0,234', '0,392', '0,321', '0,386', '0,168', '0,289', '0,326', '0,271', '0,261', '0,506', '0,471', '0,194', '0,318', '0,211', '0,245', '0,181', '0,406', '0,329', '0,313', '0,642', '0,234', '0,374', '0,402', '0,212', '0,318', '0,305', '0,118', '0,204', '0,755', '0,201', '0,229', '0,219', '0,342', '0,300', '0,284', '0,212', '0,192', '0,244', '0,189', '0,166', '0,206']}
+4 {'Sector': [0, 1, 2, 1, 1, 3, 1, 1, 4, 3, 5, 3, 2, 3, 3, 3, 1, 3, 3, 3, 3, 1, 3, 4, 1, 1, 4, 3, 3, 3, 5, 1, 2, 5, 1, 4, 1, 1, 1, 2, 1, 3, 3, 3, 1, 1, 1, 3, 0, 0, 3, 5, 3, 3, 1, 3, 1, 1, 4, 4, 3, 0, 1, 1, 1, 1, 6, 1, 1, 5, 5, 1, 3, 1, 5, 0, 1, 6, 1, 1], 'Type': [0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 1, 2, 0, 1, 1, 0, 0, 0, 1, 0, 0, 1, 2, 1, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0], 'Basement': [0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 2, 2, 0, 0, 0, 2, 0, 2, 2, 2, 0, 0, 2, 0, 1, 2, 0, 0, 0, 0, 2, 1, 0, 0, 1, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 2, 1, 0, 2, 1, 1, 0, 2, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1], 'Foundations': [0, 1, 1, 2, 1, 3, 3, 3, 3, 0, 3, 0, 1, 0, 3, 1, 3, 3, 0, 3, 1, 3, 0, 0, 3, 3, 2, 0, 1, 3, 2, 0, 3, 0, 3, 3, 3, 3, 0, 0, 3, 3, 0, 1, 0, 3, 3, 4, 3, 3, 3, 2, 1, 2, 0, 3, 3, 0, 3, 5, 3, 3, 1, 2, 3, 2, 4, 0, 1, 0, 1, 3, 1, 0, 1, 1, 0, 1, 1, 1], 'Ground Floor': [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 2, 1, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0, 3, 0, 3, 0, 0, 0, 2, 0, 2, 0, 0, 0, 0, 0, 3, 1, 0, 2, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0], 'Superstructure': [0, 1, 2, 3, 0, 0, 0, 0, 0, 4, 4, 5, 6, 1, 0, 1, 0, 0, 2, 5, 4, 0, 1, 0, 0, 0, 7, 6, 4, 4, 0, 6, 8, 0, 0, 0, 0, 0, 9, 2, 0, 0, 2, 4, 4, 0, 0, 1, 0, 4, 2, 0, 1, 0, 3, 0, 0, 6, 0, 9, 0, 2, 0, 5, 0, 1, 4, 0, 3, 4, 2, 0, 0, 0, 2, 2, 0, 4, 8, 0], 'Cladding': [0, 1, 0, 2, 0, 2, 0, 0, 0, 0, 3, 2, 4, 4, 1, 4, 4, 0, 0, 4, 0, 0, 4, 0, 0, 5, 2, 4, 3, 0, 2, 4, 4, 0, 0, 0, 6, 4, 4, 4, 0, 4, 0, 7, 2, 0, 0, 8, 4, 0, 0, 9, 6, 0, 0, 3, 4, 2, 3, 0, 0, 3, 4, 4, 0, 4, 7, 2, 4, 0, 0, 2, 4, 4, 7, 7, 0, 7, 9, 6], 'BREEAM Rating': [0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0, 0, 0, 1, 0, 1, 0, 1, 1, 0, 0, 0, 0, 2, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 4, 2, 0, 0, 4, 0, 1, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 5, 0, 0, 0, 0, 0, 0, 0], 'GIFA (m2)': [4631.0, 4640.0, 742.0, 1534.0, 7284.0, 4180.0, 15145.0, 4500.0, 3900.0, 1724.0, 2772.0, 904.0, 1050.0, 1555.0, 8118.0, 1874.0, 1305.0, 2349.0, 7755.0, 2100.0, 15985.0, 3932.0, 3460.0, 11500.0, 9483.0, 31774.0, 2276.0, 220.0, 1311.0, 11736.0, 7922.0, 544.0, 5620.0, 1712.0, 37115.0, 14029.0, 1360.0, 1154.0, 862.0, 3499.0, 10108.0, 9862.0, 1290.0, 5428.0, 125.0, 19512.0, 2395.0, 10220.0, 5500.0, 1729.0, 2054.0, 1210.0, 2769.0, 3600.0, 2400.0, 746.0, 810.0, 648.0, 500.0, 1100.0, 1900.0, 1900.0, 3023.0, 867.0, 21500.0, 3997.0, 3657.0, 1830.0, 517.0, 1643.0, 2368.0, 2404.0, 1930.0, 8748.0, 1163.0, 2575.0, 4787.0, 3851.0, 307.0, 340.0], 'Storeys': [3.0, 7.0, 3.0, 2.0, 6.0, 5.0, 10.0, 6.0, 6.0, 2.0, 4.0, 1.0, 1.0, 4.0, 4.0, 2.0, 5.0, 9.0, 3.0, 1.0, 2.0, 4.0, 2.0, 7.0, 8.0, 19.0, 7.0, 1.0, 2.0, 4.0, 7.0, 3.0, 1.0, 6.0, 17.0, 24.0, 3.0, 4.0, 3.0, 6.0, 4.0, 3.0, 3.0, 3.0, 5.0, 6.0, 5.0, 4.0, 9.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 3.0, 4.0, 2.0, 2.0, 2.0, 4.0, 3.0, 3.0, 4.0, 6.0, 3.0, 2.0, 3.0, 3.0, 3.0, 4.0, 3.0, 3.0, 7.0, 1.0, 4.0, 6.0, 1.0, 2.0, 2.0], 'Typical Span (m)': [7.0, 4.0, 2.5, 7.0, 7.5, 4.5, 7.5, 6.5, 7.0, 4.0, 8.0, 3.0, 3.0, 7.0, 6.0, 6.0, 4.0, 7.0, 7.5, 6.5, 45.0, 5.74, 4.0, 6.0, 5.0, 8.0, 6.4, 5.0, 6.5, 7.2, 6.0, 4.5, 8.1, 7.8, 7.5, 7.5, 4.0, 7.5, 0.0, 6.0, 7.5, 8.0, 3.5, 35.0, 2.9, 5.0, 6.5, 7.0, 6.0, 7.2, 7.5, 5.05, 7.2, 7.2, 3.2, 8.5, 6.0, 4.0, 15.0, 5.5, 7.0, 6.0, 5.0, 6.0, 7.2, 4.5, 12.0, 6.5, 3.2, 3.85, 7.5, 6.5, 5.5, 6.0, 6.24, 7.5, 6.0, 20.5, 4.0, 6.5], 'Typ Qk (kN_per_m2)': [4.0, 2.5, 4.0, 2.5, 2.5, 3.0, 2.5, 2.5, 2.5, 2.5, 3.0, 2.5, 0.75, 4.0, 5.0, 4.0, 2.5, 5.0, 4.0, 3.0, 5.0, 2.5, 4.0, 2.5, 2.5, 2.5, 3.5, 3.0, 3.0, 4.0, 3.0, 2.5, 5.0, 4.0, 2.5, 2.5, 2.0, 2.5, 3.0, 4.0, 2.5, 4.0, 5.0, 3.5, 1.5, 2.5, 2.5, 4.0, 10.0, 5.0, 5.0, 3.5, 1.5, 4.0, 1.5, 4.0, 2.5, 2.5, 3.5, 3.5, 4.0, 3.0, 2.5, 1.5, 2.5, 2.5, 4.0, 2.5, 1.5, 3.0, 2.5, 2.5, 1.5, 2.5, 5.5, 4.0, 2.5, 0.85, 1.5, 2.5], 'Calculated Total tCO2e': [1179.8, 881.9, 149.6, 424.5, 1896.3, 1529.8, 4057.8, 1007.2, 1141.9, 536.7, 976.0, 336.0, 316.8, 337.3, 2493.9, 524.9, 278.8, 1758.9, 1490.2, 408.6, 3602.3, 1549.5, 930.4, 2370.2, 2166.3, 10354.2, 591.0, 69.4, 294.2, 3346.6, 2080.9, 83.9, 1726.0, 703.5, 10784.6, 4310.1, 530.8, 651.8, 186.8, 818.9, 3964.2, 3164.2, 498.4, 914.3, 36.1, 6364.4, 650.1, 2670.9, 2784.9, 813.8, 399.3, 385.3, 584.7, 880.8, 435.0, 302.6, 266.7, 202.6, 320.9, 257.1, 711.5, 763.4, 641.1, 276.1, 6564.9, 472.2, 747.3, 1380.9, 104.1, 376.0, 519.2, 822.4, 578.3, 2480.7, 246.9, 493.9, 1169.0, 727.8, 51.0, 70.1], 'Calculated tCO2e_per_m2': [0.255, 0.19, 0.202, 0.277, 0.26, 0.366, 0.268, 0.224, 0.293, 0.311, 0.352, 0.372, 0.302, 0.217, 0.307, 0.28, 0.214, 0.749, 0.192, 0.195, 0.225, 0.394, 0.269, 0.206, 0.228, 0.326, 0.26, 0.316, 0.224, 0.285, 0.263, 0.154, 0.307, 0.411, 0.291, 0.307, 0.39, 0.565, 0.217, 0.234, 0.392, 0.321, 0.386, 0.168, 0.289, 0.326, 0.271, 0.261, 0.506, 0.471, 0.194, 0.318, 0.211, 0.245, 0.181, 0.406, 0.329, 0.313, 0.642, 0.234, 0.374, 0.402, 0.212, 0.318, 0.305, 0.118, 0.204, 0.755, 0.201, 0.229, 0.219, 0.342, 0.3, 0.284, 0.212, 0.192, 0.244, 0.189, 0.166, 0.206]}
+5 [[0. 0. 0. 0. 0. 0. 0. 0.]
+ [1. 0. 0. 1. 0. 1. 1. 0.]
+ [2. 0. 0. 1. 0. 2. 0. 1.]
+ [1. 1. 1. 2. 0. 3. 2. 0.]
+ [1. 0. 0. 1. 1. 0. 0. 0.]
+ [3. 1. 1. 3. 0. 0. 2. 0.]
+ [1. 0. 0. 3. 0. 0. 0. 0.]
+ [1. 0. 0. 3. 0. 0. 0. 0.]
+ [4. 0. 0. 3. 0. 0. 0. 0.]
+ [3. 0. 0. 0. 0. 4. 0. 1.]
+ [5. 0. 0. 3. 0. 4. 3. 0.]
+ [3. 1. 0. 0. 2. 5. 2. 0.]
+ [2. 1. 0. 1. 1. 6. 4. 0.]
+ [3. 0. 1. 0. 0. 1. 4. 1.]
+ [3. 0. 1. 3. 0. 0. 1. 2.]
+ [3. 0. 0. 1. 1. 1. 4. 0.]
+ [1. 0. 0. 3. 0. 0. 4. 0.]
+ [3. 0. 2. 3. 0. 0. 0. 0.]
+ [3. 0. 0. 0. 0. 2. 0. 0.]
+ [3. 0. 0. 3. 0. 5. 4. 1.]
+ [3. 0. 0. 1. 1. 4. 0. 0.]
+ [1. 0. 0. 3. 0. 0. 0. 1.]
+ [3. 0. 0. 0. 0. 1. 4. 0.]
+ [4. 0. 0. 0. 0. 0. 0. 1.]
+ [1. 0. 0. 3. 0. 0. 0. 1.]
+ [1. 0. 2. 3. 0. 0. 5. 0.]
+ [4. 0. 2. 2. 3. 7. 2. 0.]
+ [3. 0. 0. 0. 0. 6. 4. 0.]
+ [3. 2. 0. 1. 0. 4. 3. 0.]
+ [3. 0. 0. 3. 0. 4. 0. 2.]
+ [5. 0. 2. 2. 0. 0. 2. 0.]
+ [1. 0. 0. 0. 4. 6. 4. 0.]
+ [2. 0. 2. 3. 0. 8. 4. 2.]
+ [5. 0. 2. 0. 0. 0. 0. 0.]
+ [1. 0. 2. 3. 0. 0. 0. 0.]
+ [4. 0. 0. 3. 0. 0. 0. 0.]
+ [1. 0. 0. 3. 0. 0. 6. 0.]
+ [1. 0. 2. 3. 0. 0. 4. 0.]
+ [1. 0. 0. 0. 0. 9. 4. 0.]
+ [2. 1. 1. 0. 2. 2. 4. 0.]
+ [1. 0. 2. 3. 0. 0. 0. 0.]
+ [3. 0. 0. 3. 0. 0. 4. 3.]
+ [3. 0. 0. 0. 0. 2. 0. 0.]
+ [3. 1. 0. 1. 1. 4. 7. 0.]
+ [1. 0. 0. 0. 0. 4. 2. 0.]
+ [1. 1. 2. 3. 0. 0. 0. 0.]
+ [1. 0. 1. 3. 0. 0. 0. 0.]
+ [3. 0. 0. 4. 1. 1. 8. 4.]
+ [0. 1. 0. 3. 0. 0. 4. 2.]
+ [0. 0. 1. 3. 1. 4. 0. 0.]
+ [3. 0. 0. 3. 0. 2. 0. 0.]
+ [5. 1. 0. 2. 3. 0. 9. 4.]
+ [3. 0. 0. 1. 0. 1. 6. 0.]
+ [3. 0. 0. 2. 3. 0. 0. 1.]
+ [1. 1. 0. 0. 0. 3. 0. 0.]
+ [3. 1. 0. 3. 0. 0. 3. 0.]
+ [1. 2. 2. 3. 0. 0. 4. 0.]
+ [1. 0. 0. 0. 2. 6. 2. 0.]
+ [4. 1. 0. 3. 0. 0. 3. 0.]
+ [4. 1. 0. 5. 2. 9. 0. 0.]
+ [3. 0. 2. 3. 0. 0. 0. 0.]
+ [0. 0. 1. 3. 0. 2. 3. 2.]
+ [1. 0. 0. 1. 0. 0. 4. 0.]
+ [1. 1. 2. 2. 0. 5. 4. 0.]
+ [1. 0. 1. 3. 0. 0. 0. 0.]
+ [1. 0. 1. 2. 3. 1. 4. 0.]
+ [6. 1. 0. 4. 1. 4. 7. 0.]
+ [1. 2. 2. 0. 0. 0. 2. 0.]
+ [1. 1. 0. 1. 2. 3. 4. 0.]
+ [5. 0. 0. 0. 0. 4. 0. 0.]
+ [5. 0. 0. 1. 1. 2. 0. 0.]
+ [1. 1. 0. 3. 0. 0. 2. 0.]
+ [3. 1. 0. 1. 1. 0. 4. 5.]
+ [1. 0. 0. 0. 0. 0. 4. 0.]
+ [5. 0. 0. 1. 1. 2. 7. 0.]
+ [0. 0. 2. 1. 0. 2. 7. 0.]
+ [1. 0. 0. 0. 0. 0. 0. 0.]
+ [6. 1. 0. 1. 1. 4. 7. 0.]
+ [1. 1. 0. 1. 1. 8. 9. 0.]
+ [1. 0. 1. 1. 0. 0. 6. 0.]]
+6 (array([[0., 0., 0., 0., 0., 0., 0., 0.],
+       [1., 0., 0., 1., 0., 1., 1., 0.],
+       [2., 0., 0., 1., 0., 2., 0., 1.],
+       [1., 1., 1., 2., 0., 3., 2., 0.],
+       [1., 0., 0., 1., 1., 0., 0., 0.],
+       [3., 1., 1., 3., 0., 0., 2., 0.],
+       [1., 0., 0., 3., 0., 0., 0., 0.],
+       [1., 0., 0., 3., 0., 0., 0., 0.],
+       [4., 0., 0., 3., 0., 0., 0., 0.],
+       [3., 0., 0., 0., 0., 4., 0., 1.],
+       [5., 0., 0., 3., 0., 4., 3., 0.],
+       [3., 1., 0., 0., 2., 5., 2., 0.],
+       [2., 1., 0., 1., 1., 6., 4., 0.],
+       [3., 0., 1., 0., 0., 1., 4., 1.],
+       [3., 0., 1., 3., 0., 0., 1., 2.],
+       [3., 0., 0., 1., 1., 1., 4., 0.],
+       [1., 0., 0., 3., 0., 0., 4., 0.],
+       [3., 0., 2., 3., 0., 0., 0., 0.],
+       [3., 0., 0., 0., 0., 2., 0., 0.],
+       [3., 0., 0., 3., 0., 5., 4., 1.],
+       [3., 0., 0., 1., 1., 4., 0., 0.],
+       [1., 0., 0., 3., 0., 0., 0., 1.],
+       [3., 0., 0., 0., 0., 1., 4., 0.],
+       [4., 0., 0., 0., 0., 0., 0., 1.],
+       [1., 0., 0., 3., 0., 0., 0., 1.],
+       [1., 0., 2., 3., 0., 0., 5., 0.],
+       [4., 0., 2., 2., 3., 7., 2., 0.],
+       [3., 0., 0., 0., 0., 6., 4., 0.],
+       [3., 2., 0., 1., 0., 4., 3., 0.],
+       [3., 0., 0., 3., 0., 4., 0., 2.],
+       [5., 0., 2., 2., 0., 0., 2., 0.],
+       [1., 0., 0., 0., 4., 6., 4., 0.],
+       [2., 0., 2., 3., 0., 8., 4., 2.],
+       [5., 0., 2., 0., 0., 0., 0., 0.],
+       [1., 0., 2., 3., 0., 0., 0., 0.],
+       [4., 0., 0., 3., 0., 0., 0., 0.],
+       [1., 0., 0., 3., 0., 0., 6., 0.],
+       [1., 0., 2., 3., 0., 0., 4., 0.],
+       [1., 0., 0., 0., 0., 9., 4., 0.],
+       [2., 1., 1., 0., 2., 2., 4., 0.],
+       [1., 0., 2., 3., 0., 0., 0., 0.],
+       [3., 0., 0., 3., 0., 0., 4., 3.],
+       [3., 0., 0., 0., 0., 2., 0., 0.],
+       [3., 1., 0., 1., 1., 4., 7., 0.],
+       [1., 0., 0., 0., 0., 4., 2., 0.],
+       [1., 1., 2., 3., 0., 0., 0., 0.],
+       [1., 0., 1., 3., 0., 0., 0., 0.],
+       [3., 0., 0., 4., 1., 1., 8., 4.],
+       [0., 1., 0., 3., 0., 0., 4., 2.],
+       [0., 0., 1., 3., 1., 4., 0., 0.],
+       [3., 0., 0., 3., 0., 2., 0., 0.],
+       [5., 1., 0., 2., 3., 0., 9., 4.],
+       [3., 0., 0., 1., 0., 1., 6., 0.],
+       [3., 0., 0., 2., 3., 0., 0., 1.],
+       [1., 1., 0., 0., 0., 3., 0., 0.],
+       [3., 1., 0., 3., 0., 0., 3., 0.],
+       [1., 2., 2., 3., 0., 0., 4., 0.],
+       [1., 0., 0., 0., 2., 6., 2., 0.],
+       [4., 1., 0., 3., 0., 0., 3., 0.],
+       [4., 1., 0., 5., 2., 9., 0., 0.],
+       [3., 0., 2., 3., 0., 0., 0., 0.],
+       [0., 0., 1., 3., 0., 2., 3., 2.],
+       [1., 0., 0., 1., 0., 0., 4., 0.],
+       [1., 1., 2., 2., 0., 5., 4., 0.],
+       [1., 0., 1., 3., 0., 0., 0., 0.],
+       [1., 0., 1., 2., 3., 1., 4., 0.],
+       [6., 1., 0., 4., 1., 4., 7., 0.],
+       [1., 2., 2., 0., 0., 0., 2., 0.],
+       [1., 1., 0., 1., 2., 3., 4., 0.],
+       [5., 0., 0., 0., 0., 4., 0., 0.],
+       [5., 0., 0., 1., 1., 2., 0., 0.],
+       [1., 1., 0., 3., 0., 0., 2., 0.],
+       [3., 1., 0., 1., 1., 0., 4., 5.],
+       [1., 0., 0., 0., 0., 0., 4., 0.],
+       [5., 0., 0., 1., 1., 2., 7., 0.],
+       [0., 0., 2., 1., 0., 2., 7., 0.],
+       [1., 0., 0., 0., 0., 0., 0., 0.],
+       [6., 1., 0., 1., 1., 4., 7., 0.],
+       [1., 1., 0., 1., 1., 8., 9., 0.],
+       [1., 0., 1., 1., 0., 0., 6., 0.]]), array([[-0.04691337, -0.3847226 , -0.01792178,  0.67209578],
+       [-0.04552841,  0.69520049, -0.52514194, -0.49002949],
+       [-0.64536703, -0.3847226 , -0.77875202,  0.67209578],
+       [-0.52349115, -0.65470337, -0.01792178, -0.49002949],
+       [ 0.36134006,  0.42521972,  0.06661491, -0.49002949],
+       [-0.11631491,  0.15523894, -0.44060525, -0.1026544 ],
+       [ 1.57101974,  1.50514281,  0.06661491, -0.49002949],
+       [-0.06707213,  0.42521972, -0.10245847, -0.49002949],
+       [-0.15940234,  0.42521972, -0.01792178, -0.49002949],
+       [-0.49425325, -0.65470337, -0.52514194, -0.49002949],
+       [-0.33298314, -0.11474183,  0.15115161, -0.1026544 ],
+       [-0.62043787, -0.92468415, -0.69421533, -0.49002949],
+       [-0.59797086, -0.92468415, -0.69421533, -1.84584231],
+       [-0.52025959, -0.11474183, -0.01792178,  0.67209578],
+       [ 0.48967906, -0.11474183, -0.18699517,  1.44684596],
+       [-0.4711707 , -0.65470337, -0.18699517,  0.67209578],
+       [-0.55873052,  0.15523894, -0.52514194, -0.49002949],
+       [-0.39807594,  1.23516204, -0.01792178,  1.44684596],
+       [ 0.43381928, -0.3847226 ,  0.06661491,  0.67209578],
+       [-0.43639298, -0.92468415, -0.10245847, -0.1026544 ],
+       [ 1.70028204, -0.65470337,  6.40686692,  1.44684596],
+       [-0.15447806, -0.11474183, -0.23095425, -0.49002949],
+       [-0.22711117, -0.65470337, -0.52514194,  0.67209578],
+       [ 1.01011369,  0.69520049, -0.18699517, -0.49002949],
+       [ 0.69973029,  0.96518126, -0.35606855, -0.49002949],
+       [ 4.1299516 ,  3.93496977,  0.15115161, -0.49002949],
+       [-0.40930945,  0.69520049, -0.11936581,  0.28472069],
+       [-0.72569432, -0.92468415, -0.35606855, -0.1026544 ],
+       [-0.55780721, -0.65470337, -0.10245847, -0.1026544 ],
+       [ 1.04643024, -0.11474183,  0.0158929 ,  0.67209578],
+       [ 0.45951785,  0.69520049, -0.18699517, -0.1026544 ],
+       [-0.675836  , -0.3847226 , -0.44060525, -0.49002949],
+       [ 0.1052776 , -0.92468415,  0.16805895,  1.44684596],
+       [-0.49609985,  0.42521972,  0.11733693,  0.67209578],
+       [ 4.95184438,  3.39500822,  0.06661491, -0.49002949],
+       [ 1.39928554,  5.28487363,  0.06661491, -0.49002949],
+       [-0.55026691, -0.3847226 , -0.52514194, -0.87740458],
+       [-0.58196695, -0.11474183,  0.06661491, -0.49002949],
+       [-0.62690099, -0.3847226 , -1.20143549, -0.1026544 ],
+       [-0.2211097 ,  0.42521972, -0.18699517,  0.67209578],
+       [ 0.7959076 , -0.11474183,  0.06661491, -0.49002949],
+       [ 0.75805221, -0.3847226 ,  0.15115161,  0.67209578],
+       [-0.56103877, -0.3847226 , -0.60967863,  1.44684596],
+       [ 0.07573193, -0.3847226 ,  4.71613305,  0.28472069],
+       [-0.74031327,  0.15523894, -0.71112266, -1.26477967],
+       [ 2.24302981,  0.42521972, -0.35606855, -0.49002949],
+       [-0.39099729,  0.15523894, -0.10245847, -0.49002949],
+       [ 0.81314257, -0.11474183, -0.01792178,  0.67209578],
+       [ 0.08681156,  1.23516204, -0.18699517,  5.32059687],
+       [-0.49348383, -0.3847226 ,  0.0158929 ,  1.44684596],
+       [-0.44347163, -0.3847226 ,  0.06661491,  1.44684596],
+       [-0.57334947, -0.3847226 , -0.34761488,  0.28472069],
+       [-0.33344479, -0.3847226 ,  0.0158929 , -1.26477967],
+       [-0.20556745, -0.3847226 ,  0.0158929 ,  0.67209578],
+       [-0.39022788, -0.3847226 , -0.66040065, -1.26477967],
+       [-0.6447515 , -0.3847226 ,  0.2356883 ,  0.67209578],
+       [-0.63490294, -0.11474183, -0.18699517, -0.49002949],
+       [-0.6598321 , -0.65470337, -0.52514194, -0.49002949],
+       [-0.68260688, -0.65470337,  1.33466531,  0.28472069],
+       [-0.59027667, -0.65470337, -0.27153186,  0.28472069],
+       [-0.46716972, -0.11474183, -0.01792178,  0.67209578],
+       [-0.46716972, -0.3847226 , -0.18699517, -0.1026544 ],
+       [-0.29435834, -0.3847226 , -0.35606855, -0.49002949],
+       [-0.62613157, -0.11474183, -0.18699517, -1.26477967],
+       [ 2.54895058,  0.42521972,  0.0158929 , -0.49002949],
+       [-0.14447562, -0.3847226 , -0.44060525, -0.49002949],
+       [-0.19679608, -0.65470337,  0.82744515,  0.67209578],
+       [-0.47794158, -0.3847226 , -0.10245847, -0.49002949],
+       [-0.67999086, -0.3847226 , -0.66040065, -1.26477967],
+       [-0.50671783, -0.3847226 , -0.55050295, -0.1026544 ],
+       [-0.39515215, -0.11474183,  0.06661491, -0.49002949],
+       [-0.38961234, -0.3847226 , -0.10245847, -0.49002949],
+       [-0.46255321, -0.3847226 , -0.27153186, -1.26477967],
+       [ 0.58662578,  0.69520049, -0.18699517, -0.49002949],
+       [-0.580582  , -0.92468415, -0.14641755,  1.83422106],
+       [-0.36329823, -0.11474183,  0.06661491,  0.67209578],
+       [-0.02290751,  0.42521972, -0.18699517, -0.49002949],
+       [-0.16694264, -0.92468415,  2.26456894, -1.76836729],
+       [-0.71230644, -0.65470337, -0.52514194, -1.26477967],
+       [-0.70722827, -0.65470337, -0.10245847, -0.49002949]]), array([[1.17980e+03, 2.55000e-01],
+       [8.81900e+02, 1.90000e-01],
+       [1.49600e+02, 2.02000e-01],
+       [4.24500e+02, 2.77000e-01],
+       [1.89630e+03, 2.60000e-01],
+       [1.52980e+03, 3.66000e-01],
+       [4.05780e+03, 2.68000e-01],
+       [1.00720e+03, 2.24000e-01],
+       [1.14190e+03, 2.93000e-01],
+       [5.36700e+02, 3.11000e-01],
+       [9.76000e+02, 3.52000e-01],
+       [3.36000e+02, 3.72000e-01],
+       [3.16800e+02, 3.02000e-01],
+       [3.37300e+02, 2.17000e-01],
+       [2.49390e+03, 3.07000e-01],
+       [5.24900e+02, 2.80000e-01],
+       [2.78800e+02, 2.14000e-01],
+       [1.75890e+03, 7.49000e-01],
+       [1.49020e+03, 1.92000e-01],
+       [4.08600e+02, 1.95000e-01],
+       [3.60230e+03, 2.25000e-01],
+       [1.54950e+03, 3.94000e-01],
+       [9.30400e+02, 2.69000e-01],
+       [2.37020e+03, 2.06000e-01],
+       [2.16630e+03, 2.28000e-01],
+       [1.03542e+04, 3.26000e-01],
+       [5.91000e+02, 2.60000e-01],
+       [6.94000e+01, 3.16000e-01],
+       [2.94200e+02, 2.24000e-01],
+       [3.34660e+03, 2.85000e-01],
+       [2.08090e+03, 2.63000e-01],
+       [8.39000e+01, 1.54000e-01],
+       [1.72600e+03, 3.07000e-01],
+       [7.03500e+02, 4.11000e-01],
+       [1.07846e+04, 2.91000e-01],
+       [4.31010e+03, 3.07000e-01],
+       [5.30800e+02, 3.90000e-01],
+       [6.51800e+02, 5.65000e-01],
+       [1.86800e+02, 2.17000e-01],
+       [8.18900e+02, 2.34000e-01],
+       [3.96420e+03, 3.92000e-01],
+       [3.16420e+03, 3.21000e-01],
+       [4.98400e+02, 3.86000e-01],
+       [9.14300e+02, 1.68000e-01],
+       [3.61000e+01, 2.89000e-01],
+       [6.36440e+03, 3.26000e-01],
+       [6.50100e+02, 2.71000e-01],
+       [2.67090e+03, 2.61000e-01],
+       [2.78490e+03, 5.06000e-01],
+       [8.13800e+02, 4.71000e-01],
+       [3.99300e+02, 1.94000e-01],
+       [3.85300e+02, 3.18000e-01],
+       [5.84700e+02, 2.11000e-01],
+       [8.80800e+02, 2.45000e-01],
+       [4.35000e+02, 1.81000e-01],
+       [3.02600e+02, 4.06000e-01],
+       [2.66700e+02, 3.29000e-01],
+       [2.02600e+02, 3.13000e-01],
+       [3.20900e+02, 6.42000e-01],
+       [2.57100e+02, 2.34000e-01],
+       [7.11500e+02, 3.74000e-01],
+       [7.63400e+02, 4.02000e-01],
+       [6.41100e+02, 2.12000e-01],
+       [2.76100e+02, 3.18000e-01],
+       [6.56490e+03, 3.05000e-01],
+       [4.72200e+02, 1.18000e-01],
+       [7.47300e+02, 2.04000e-01],
+       [1.38090e+03, 7.55000e-01],
+       [1.04100e+02, 2.01000e-01],
+       [3.76000e+02, 2.29000e-01],
+       [5.19200e+02, 2.19000e-01],
+       [8.22400e+02, 3.42000e-01],
+       [5.78300e+02, 3.00000e-01],
+       [2.48070e+03, 2.84000e-01],
+       [2.46900e+02, 2.12000e-01],
+       [4.93900e+02, 1.92000e-01],
+       [1.16900e+03, 2.44000e-01],
+       [7.27800e+02, 1.89000e-01],
+       [5.10000e+01, 1.66000e-01],
+       [7.01000e+01, 2.06000e-01]]))
+7 <display_preprocessed.matrix_display object at 0x00000212CE6482B0>
+8 ;
+9 C:/Users/sfenton/Code/Repositories/CO2footprint/DATA/210413_PM_CO2_data
+    Sector  Type  ...  Calculated Total tCO2e  Calculated tCO2e_per_m2
+0        0     0  ...                  1179.8                    0.255
+1        1     0  ...                   881.9                    0.190
+2        2     0  ...                   149.6                    0.202
+3        1     1  ...                   424.5                    0.277
+4        1     0  ...                  1896.3                    0.260
+..     ...   ...  ...                     ...                      ...
+75       0     0  ...                   493.9                    0.192
+76       1     0  ...                  1169.0                    0.244
+77       6     1  ...                   727.8                    0.189
+78       1     1  ...                    51.0                    0.166
+79       1     0  ...                    70.1                    0.206
+
+[80 rows x 14 columns]
+10 ({'Sector': [1, 0, 0], 'Type': [1, 0, 0], 'Basement': [1, 0, 0], 'Foundations': [1, 0, 0], 'Ground Floor': [1, 0, 0], 'Superstructure': [1, 0, 0], 'Cladding': [1, 0, 0], 'BREEAM Rating': [1, 0, 0], 'GIFA (m2)': [1, 2, 3], 'Storeys': [1, 2, 3], 'Typical Span (m)': [1, 2, 3], 'Typ Qk (kN_per_m2)': [1, 2, 3]}, ['Sector', 'Type', 'Basement', 'Foundations', 'Ground Floor', 'Superstructure', 'Cladding', 'BREEAM Rating', 'GIFA (m2)', 'Storeys', 'Typical Span (m)', 'Typ Qk (kN_per_m2)'], [[1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 0, 0], [1, 2, 3], [1, 2, 3], [1, 2, 3], [1, 2, 3]])
+11 <class 'numpy.ndarray'> (80, 12) [1.00e+00 0.00e+00 0.00e+00 1.00e+00 0.00e+00 1.00e+00 1.00e+00 0.00e+00
+ 4.64e+03 7.00e+00 4.00e+00 2.50e+00] [0. 0. 0. 1. 0. 1. 0. 0. 0. 0. 0. 1. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0.
+ 0. 0. 0. 0. 2. 0. 0. 0. 0. 0. 0. 0. 0. 0. 0. 1. 0. 0. 0. 1. 0. 1. 0. 0.
+ 1. 0. 0. 1. 0. 0. 1. 1. 2. 0. 1. 1. 0. 0. 0. 1. 0. 0. 1. 2. 1. 0. 0. 1.
+ 1. 0. 0. 0. 0. 1. 1. 0.]
+11 <class 'numpy.ndarray'> (80, 12) [  1.    0.    1.    1.    0.    0.    6.    0.  340.    2.    6.5   2.5] [ 4.    2.5   4.    2.5   2.5   3.    2.5   2.5   2.5   2.5   3.    2.5
+  0.75  4.    5.    4.    2.5   5.    4.    3.    5.    2.5   4.    2.5
+  2.5   2.5   3.5   3.    3.    4.    3.    2.5   5.    4.    2.5   2.5
+  2.    2.5   3.    4.    2.5   4.    5.    3.5   1.5   2.5   2.5   4.
+ 10.    5.    5.    3.5   1.5   4.    1.5   4.    2.5   2.5   3.5   3.5
+  4.    3.    2.5   1.5   2.5   2.5   4.    2.5   1.5   3.    2.5   2.5
+  1.5   2.5   5.5   4.    2.5   0.85  1.5   2.5 ]
+11 <class 'numpy.ndarray'> (80, 37) [1.00000000e+00 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 0.00000000e+00 0.00000000e+00 0.00000000e+00
+ 0.00000000e+00 4.63100000e+03 2.14461610e+07 9.93171716e+10
+ 3.00000000e+00 9.00000000e+00 2.70000000e+01 7.00000000e+00
+ 4.90000000e+01 3.43000000e+02 4.00000000e+00 1.60000000e+01
+ 6.40000000e+01] [1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1. 1.
+ 1. 1. 1. 1. 1. 1. 1. 1.]
+11 <class 'numpy.ndarray'> (80, 37) [1.00000e+00 1.00000e+00 0.00000e+00 0.00000e+00 0.00000e+00 0.00000e+00
+ 0.00000e+00 1.00000e+00 0.00000e+00 0.00000e+00 1.00000e+00 0.00000e+00
+ 0.00000e+00 0.00000e+00 0.00000e+00 0.00000e+00 0.00000e+00 0.00000e+00
+ 0.00000e+00 6.00000e+00 0.00000e+00 0.00000e+00 0.00000e+00 0.00000e+00
+ 0.00000e+00 3.40000e+02 1.15600e+05 3.93040e+07 2.00000e+00 4.00000e+00
+ 8.00000e+00 6.50000e+00 4.22500e+01 2.74625e+02 2.50000e+00 6.25000e+00
+ 1.56250e+01] [6.40000e+01 1.56250e+01 6.40000e+01 1.56250e+01 1.56250e+01 2.70000e+01
+ 1.56250e+01 1.56250e+01 1.56250e+01 1.56250e+01 2.70000e+01 1.56250e+01
+ 4.21875e-01 6.40000e+01 1.25000e+02 6.40000e+01 1.56250e+01 1.25000e+02
+ 6.40000e+01 2.70000e+01 1.25000e+02 1.56250e+01 6.40000e+01 1.56250e+01
+ 1.56250e+01 1.56250e+01 4.28750e+01 2.70000e+01 2.70000e+01 6.40000e+01
+ 2.70000e+01 1.56250e+01 1.25000e+02 6.40000e+01 1.56250e+01 1.56250e+01
+ 8.00000e+00 1.56250e+01 2.70000e+01 6.40000e+01 1.56250e+01 6.40000e+01
+ 1.25000e+02 4.28750e+01 3.37500e+00 1.56250e+01 1.56250e+01 6.40000e+01
+ 1.00000e+03 1.25000e+02 1.25000e+02 4.28750e+01 3.37500e+00 6.40000e+01
+ 3.37500e+00 6.40000e+01 1.56250e+01 1.56250e+01 4.28750e+01 4.28750e+01
+ 6.40000e+01 2.70000e+01 1.56250e+01 3.37500e+00 1.56250e+01 1.56250e+01
+ 6.40000e+01 1.56250e+01 3.37500e+00 2.70000e+01 1.56250e+01 1.56250e+01
+ 3.37500e+00 1.56250e+01 1.66375e+02 6.40000e+01 1.56250e+01 6.14125e-01
+ 3.37500e+00 1.56250e+01]
+
+Process finished with exit code 0

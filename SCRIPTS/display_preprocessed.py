@@ -1,12 +1,15 @@
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
+from data_preprocessing import *
 
 
-class matrix_display:
-    def __init__(self, my_data):
+class matrix_display():
+
+    def __init__(self, preprocessed_data):
+
         #super().__init__() #TODO: ?
-        self.data = my_data
+        self.preprocessed_data = preprocessed_data
 
     def view_dataframe_from_dict(self, mydict, disp=False):
         import pandas as pd
@@ -33,18 +36,18 @@ class matrix_display:
         if folder:
             plt.savefig(folder + '/' + x_label + '-' + y_label + '.png')
         if plot:
-            plt.show()
+            plt.show() #TODO: delete this?
 
     def plot_graph_adv(self, x_label, y_label,
                        title="Features influencing CO2 footprint of Structures - Datasource : Price & Myers",
                        reference="", figure_size=(12, 15), save=False, show=True):
         import os
-        dataframe = self.view_dataframe_from_dict(self.data.string_dict_to_number_dict())
-        label_dict = self.data.index_dict_from_csv()
+        dataframe = self.view_dataframe_from_dict(self.preprocessed_data.string_dict_to_number_dict())
+        label_dict = self.preprocessed_data.index_dict_from_csv()
         labels = label_dict[x_label]
         fig, ax = plt.subplots(figsize=figure_size)
         ax.set_title(title + " " + reference)
-        if x_label in self.data.features.STR_FEATURES:
+        if x_label in self.preprocessed_data.Model_Structural_Embodied_CO2.x_features_str:
             x = np.arange(len(labels))
             ax.set_ylabel(y_label)
             ax.set_xticks(x)
@@ -53,9 +56,9 @@ class matrix_display:
                      rotation_mode="anchor")
         sns.scatterplot(data=dataframe, x=x_label, y=y_label, hue=y_label, ax=ax)
 
-        if save and not os.path.isdir(self.data.features.output_path):
-            os.makedirs(self.data.features.output_path)
-            plt.savefig(self.data.features.output_path + '/' + x_label + '-' + y_label + '.png')
+        if save and not os.path.isdir(self.preprocessed_data.Model_Structural_Embodied_CO2.output_path):
+            os.makedirs(self.preprocessed_data.Model_Structural_Embodied_CO2.output_path)
+            plt.savefig(self.preprocessed_data.Model_Structural_Embodied_CO2.output_path + '/' + x_label + '-' + y_label + '.png')
 
         if show:
             plt.show()

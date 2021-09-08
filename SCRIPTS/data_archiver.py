@@ -1,4 +1,4 @@
-from model_features import *
+from model_structural_embodied_co2 import *
 
 def items_print(my_object, reference, output_path = None, VISU=False):
     import os
