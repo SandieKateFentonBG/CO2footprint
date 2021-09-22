@@ -49,24 +49,23 @@ powerdicto = { #TODO : will be used later
 3. IMPORT SCRIPTS
 """
 
-from data_handler import *
+from SCRIPTS.old.data_handler import *
 X_data, y = split_X_Y_values(FEATURES_NAMES, OUTPUT_NAMES, input_path, 5, delimiter=';')
 id_dict = index_dict_from_csv(input_path, 5)
 data_dict = build_dictionary(X_data, y, FEATURES_NAMES, OUTPUT_NAMES)
 nb_dict = string_dict_to_number_dict(id_dict, data_dict, STR_FEATURES, INT_FEATURES + OUTPUT_NAMES)
 x_qlt_df, x_qtt_df, y_df = extract_X_y_df_from_dict(nb_dict, STR_FEATURES, INT_FEATURES, OUTPUT_NAMES, scale_int=f_scaling)
 
-from data_adapter import *
+from SCRIPTS.old.data_adapter import *
 #X = create_polynomial_features(X_df, FEATURES_NAMES, powerdicto) #TODO : integrate qlt features to model
 X = create_polynomial_features(x_qtt_df, INT_FEATURES, power_dict_int_features)
 training, test = split_dataset(X, y_df, train_ratio)
 
-from linear_regression import *
 X_tr, y_tr = training
 y_tr_study = y_tr[:, study] #TODO : check I can only predict one y type at a time?
 theta_opt = regularized_linear_regression_parameters(X_tr, y_tr_study, reg)
 
-from model_evaluator import *
+from SCRIPTS.old.model_evaluator import *
 X_te, y_te = test
 y_te_study = y_te[:, study]
 prediction = predict_footprint(X_te, theta_opt)

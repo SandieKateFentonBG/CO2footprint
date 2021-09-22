@@ -1,10 +1,10 @@
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
-from data_preprocessing import *
+from _12_setup_preprocess_data import *
 
 
-class matrix_display():
+class data_display():
 
     def __init__(self, preprocessed_data):
 
@@ -42,8 +42,8 @@ class matrix_display():
                        title="Features influencing CO2 footprint of Structures - Datasource : Price & Myers",
                        reference="", figure_size=(12, 15), save=False, show=True):
         import os
-        dataframe = self.view_dataframe_from_dict(self.preprocessed_data.string_dict_to_number_dict())
-        label_dict = self.preprocessed_data.index_dict_from_csv()
+        dataframe = self.view_dataframe_from_dict(self.preprocessed_data.dictionary_of_data())
+        label_dict = self.preprocessed_data.dictionary_of_labels()
         labels = label_dict[x_label]
         fig, ax = plt.subplots(figsize=figure_size)
         ax.set_title(title + " " + reference)

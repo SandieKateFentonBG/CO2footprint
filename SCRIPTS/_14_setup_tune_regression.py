@@ -7,7 +7,7 @@ class linear_regression():
 
         self.proc_data = processed_data
 
-    def regularized_linear_regression_parameters(self):
+    def optimize_parameters(self): #theta_opt
         # Calculate the regularized pseudo_inverse of A
         X_set = self.proc_data.x_tr
         y_set = self.proc_data.y_tr
@@ -19,7 +19,7 @@ class linear_regression():
 
     def predict_footprint(self):
         X_set = self.proc_data.x_te
-        theta = self.regularized_linear_regression_parameters()
+        theta = self.optimize_parameters()
         return np.matmul(X_set, theta)
 
     def MSE(self):
@@ -36,7 +36,6 @@ class linear_regression():
 
     def evaluate_cost(self, method='mse'):
         prediction = self.predict_footprint()
-        reference = self.proc_data.y_te
         if method == 'mse':
             return self.MSE() / len(prediction)
         elif method == 'mae':

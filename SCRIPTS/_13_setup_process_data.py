@@ -62,7 +62,6 @@ class data_processing():
             polynomial_features = np.hstack((polynomial_features, new_columns))
         return polynomial_features
 
-
     def split_training_testing_data(self,shuffle=False):
         X = self.create_polynomial_features() #TODO : check split before or after power up to polynomial data?
         y = self.output_df

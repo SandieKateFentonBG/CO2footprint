@@ -11,11 +11,11 @@ from data_preprocessing import *
 my_prep_data = data_preprocessing(mymodel)
 
 
-print("0", my_prep_data.string_dict_to_number_dict)
-print("1", my_prep_data.index_dict_from_csv())
+print("0", my_prep_data.dictionary_of_data)
+print("1", my_prep_data.dictionary_of_labels())
 print("2", my_prep_data.separate_X_Y_values())
-print("3", my_prep_data.build_dictionary())
-print("4", my_prep_data.string_dict_to_number_dict())
+print("3", my_prep_data.dictionary_of_values())
+print("4", my_prep_data.dictionary_of_data())
 print("5", my_prep_data.dataframe_from_feature(my_prep_data.Model_Structural_Embodied_CO2.x_features_str))
 print("6", my_prep_data.full_model_dataframe())
 
@@ -38,7 +38,7 @@ unit = my_matrix.preprocessed_data.Model_Structural_Embodied_CO2.tCO2e_per_m2
 #print("7", my_matrix)
 #print("8", my_matrix.preprocessed_data.delimiter)
 #print("9", my_matrix.preprocessed_data.Model_Structural_Embodied_CO2.input_path)
-print(my_matrix.view_dataframe_from_dict(my_prep_data.string_dict_to_number_dict()))
+print(my_matrix.view_dataframe_from_dict(my_prep_data.dictionary_of_data()))
 
 """
 4. MAP DATA TO OBJECTIVE FUNCTION

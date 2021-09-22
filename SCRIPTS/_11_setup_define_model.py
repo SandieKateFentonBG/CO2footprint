@@ -1,7 +1,7 @@
 
 
 class Model_Structural_Embodied_CO2:
-    def __init__(self, date="210830", test_count='1', archive=True, display_plots=False,
+    def __init__(self, date="210910", test_count='1', archive=True, display_plots=True,
                  display_features=True,
                  input_path="C:/Users/sfenton/Code/Repositories/CO2footprint/DATA/210413_PM_CO2_data",
                  output_path='C:/Users/sfenton/Code/Repositories/CO2footprint/RESULTS/',
@@ -59,7 +59,7 @@ class Model_Structural_Embodied_CO2:
         self.Rating_power = Rating_power
 
 
-    def printMe(self, title, save=False, show=True):
+    def export_model_data(self, format = '.txt', title="data", save=True, show=True):
         import os
         if save and not os.path.isdir(self.output_path):
             os.makedirs(self.output_path)
@@ -67,8 +67,6 @@ class Model_Structural_Embodied_CO2:
             if show:
                 print(' ', k, ' : ', v)
             if save:
-                print(' ', k, ' : ', v, file=open(self.output_path + title + ".txt", 'w+'))
-
-
+                print(' ', k, ' : ', v, file=open(self.output_path + title + format, 'a'))
 
 
