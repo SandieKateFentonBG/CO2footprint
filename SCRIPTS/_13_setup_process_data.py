@@ -7,8 +7,9 @@ class data_processing():
         self.power_dictionary = self.construct_power_dictionary()[0]
         self.selected_features = self.construct_power_dictionary()[1]
         self.selected_powers = self.construct_power_dictionary()[2]
-        self.input_df = self.preprocessed_data.dataframe_from_feature(self.selected_features,
-                                                    self.preprocessed_data.Model_Structural_Embodied_CO2.f_scaling)
+        self.input_df = self.preprocessed_data.x_df
+        # self.input_df = self.preprocessed_data.dataframe_from_feature(self.selected_features,
+        #                                            self.preprocessed_data.Model_Structural_Embodied_CO2.f_scaling)
         self.output_df = self.preprocessed_data.y_df
         #self.output_df = self.preprocessed_data.dataframe_from_feature(
         #    self.preprocessed_data.Model_Structural_Embodied_CO2.y_features,
@@ -44,6 +45,39 @@ class data_processing():
 
         return [dictio, selected_features, selected_powers] #todo: do dictionaries keep orders?if so keeping all this is useless
 
+    def construct_power_dictionary3(self):
+
+        dictio = dict()
+
+        all_powers = [self.preprocessed_data.Model_Structural_Embodied_CO2.Sector_power,
+                      self.preprocessed_data.Model_Structural_Embodied_CO2.Type_power,
+                      self.preprocessed_data.Model_Structural_Embodied_CO2.Basement_power,
+                      self.preprocessed_data.Model_Structural_Embodied_CO2.Foundations_power,
+                      self.preprocessed_data.Model_Structural_Embodied_CO2.Groundfloor_power,
+                      self.preprocessed_data.Model_Structural_Embodied_CO2.Superstructure_power,
+                      self.preprocessed_data.Model_Structural_Embodied_CO2.Cladding_power,
+                      self.preprocessed_data.Model_Structural_Embodied_CO2.Rating_power,
+                      self.preprocessed_data.Model_Structural_Embodied_CO2.GIFA_power,
+                      self.preprocessed_data.Model_Structural_Embodied_CO2.Storeys_power,
+                      self.preprocessed_data.Model_Structural_Embodied_CO2.Span_power,
+                      self.preprocessed_data.Model_Structural_Embodied_CO2.Qk_power]
+        if self.preprocessed_data.Model_Structural_Embodied_CO2.logit:
+            all_powers = self.preprocessed_data.expand_list(all_powers, self.preprocessed_data.create_max_list())
+            qual_features = self.preprocessed_data.flatten(self.preprocessed_data.create_long_label_list())
+        else:
+            qual_features = self.preprocessed_data.Model_Structural_Embodied_CO2.x_features_str
+
+        all_features = qual_features + self.preprocessed_data.Model_Structural_Embodied_CO2.x_features_int
+        selected_features = []
+        selected_powers = []
+
+        for feature, power_list in zip(all_features, all_powers):
+            if power_list:
+                dictio[feature] = power_list
+                selected_features.append(feature)
+                selected_powers.append(power_list)
+
+        return [dictio, selected_features, selected_powers] #todo: do dictionaries keep orders?if so keeping all this is useless
 
     def power_up_feature(self, featureArray_column, powerList):
         list_of_virtual_features = []
@@ -71,5 +105,16 @@ class data_processing():
         cutoff = int(X.shape[0] * train_ratio)
         return (X[:cutoff, :], y[:cutoff]), (X[cutoff:, :], y[cutoff:])
 
-    def cross_validation(self):
+    def cross_validation_split(self, split = 5):
+
+
         pass # TODO : split data in 5 groups, rotate between groups when training
+
+    def ratio_split(self):
+        X = self.create_polynomial_features()  # TODO : check split before or after power up to polynomial data?
+        y = self.output_df
+        train_ratio = self.preprocessed_data.Model_Structural_Embodied_CO2.train_ratio
+        if shuffle:
+            pass  # TODO
+        cutoff = int(X.shape[0] * train_ratio)
+        return (X[:cutoff, :], y[:cutoff]), (X[cutoff:, :], y[cutoff:])

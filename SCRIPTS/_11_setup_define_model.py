@@ -2,13 +2,13 @@
 
 class Model_Structural_Embodied_CO2:
     def __init__(self, date="210910", test_count='1', archive=True, display_plots=True,
-                 display_features=True,
+                 display_features=True, logit = True,
                  input_path="C:/Users/sfenton/Code/Repositories/CO2footprint/DATA/210413_PM_CO2_data",
                  output_path='C:/Users/sfenton/Code/Repositories/CO2footprint/RESULTS/',
                  x_features_str=['Sector', 'Type', 'Basement', 'Foundations', 'Ground Floor', 'Superstructure', 'Cladding', 'BREEAM Rating'],
                  x_features_int=['GIFA (m2)', 'Storeys', 'Typical Span (m)', 'Typ Qk (kN_per_m2)'],
                  y_features=['Calculated Total tCO2e', 'Calculated tCO2e_per_m2'],
-                 tCO2e_per_m2 = 1, train_ratio = 0.8, reg=1, f_scaling=True, GIFA_power=[1, 2, 3],
+                 tCO2e_per_m2 = 1, train_ratio = 0.8, reg=1, f_scaling=False, GIFA_power=[1, 2, 3],
                  Storeys_power=[1, 2], Span_power=[1, 2], Qk_power = [1, 2, 3], Sector_power=[1],
                  Type_power=[1, 2], Basement_power=[1], Foundations_power=[1], Groundfloor_power=[1],
                  Superstructure_power=[1], Cladding_power=[1], Rating_power=[1]):
@@ -39,6 +39,7 @@ class Model_Structural_Embodied_CO2:
         self.train_ratio = train_ratio
         self.reg = reg
         self.f_scaling = f_scaling
+        self.logit = logit
 
 
         """

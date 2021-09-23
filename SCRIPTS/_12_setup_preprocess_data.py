@@ -1,18 +1,19 @@
 from _11_setup_define_model import *
+import numpy as np
 
 class data_preprocessing():
 
-    def __init__(self, my_model, first_line=5, delimiter=';'):
+    def __init__(self, my_model, first_line=5, delimiter=';', logit=True):
 
         #super().__init__() #TODO: ?
         self.delimiter = delimiter
         self.first_line = first_line
         self.Model_Structural_Embodied_CO2 = my_model
         self.unit = [self.Model_Structural_Embodied_CO2.y_features[self.Model_Structural_Embodied_CO2.tCO2e_per_m2]]
-        self.x_qual_df = self.dataframe_from_feature(self.Model_Structural_Embodied_CO2.x_features_str)
-        self.x_quant_df = self.dataframe_from_feature(self.Model_Structural_Embodied_CO2.x_features_int)
-        self.x_df = self.dataframe_from_feature(self.Model_Structural_Embodied_CO2.x_features)
-        self.y_df = self.dataframe_from_feature(self.unit)
+        # self.x_qual_df = self.full_model_dataframe()[0]
+        # self.x_quant_df = self.full_model_dataframe()[1]
+        # self.x_df = np.concatenate((self.x_qual_df, self.x_quant_df), axis=1)
+        # self.y_df = self.dataframe_from_feature(self.unit)
 
     def open_csv_at_given_line(self):
         import csv
@@ -101,6 +102,16 @@ class data_preprocessing():
             long_labels_list.append(l)
         return long_labels_list
 
+    def flatten(self, list):
+        return [item for sublist in list for item in sublist]
+
+    def length_list(self, list):
+        return [len(item) for item in list]
+
+    def expand_list(self, list, shape):
+
+        return self.flatten([[item]*size for item, size in zip(list, shape)])
+
     def create_long_label_dict(self):
         long_labels_list = self.create_long_label_list()
         long_label_dict = dict()
@@ -180,7 +191,8 @@ class data_preprocessing():
                 number_dict[qn_feature].append(self.convert_feature_str_to_float(qn_value))
         return number_dict
 
-    def dataframe_from_feature(self, feature_labels, scale = False):
+    def dataframe_from_feature(self, feature_labels):
+        scale = self.Model_Structural_Embodied_CO2.f_scaling
         import numpy as np
         data_dict = self.dictionary_of_data()
         num_samples = len(data_dict[feature_labels[0]])
@@ -192,9 +204,23 @@ class data_preprocessing():
             data = self.scale_features(data)
         return data
 
-    def full_model_dataframe(self):
+    def dataframe_from_subfeature(self):
+        import numpy as np
 
-        x_qual_df = self.dataframe_from_feature(self.Model_Structural_Embodied_CO2.x_features_str)
+        long_label_dict = self.create_long_label_dict()
+        condense_array = self.create_condense_array()
+        num_features = len(long_label_dict) #50
+        num_samples = len(condense_array)
+        data = np.zeros((num_samples, num_features))
+        for i in range(num_samples):  # 80
+            data[i, :] = np.array([long_label_dict[f][i] for f in long_label_dict.keys()])
+        return data
+
+    def full_model_dataframe(self): #TODO: update default here
+        if self.Model_Structural_Embodied_CO2.logit:
+            x_qual_df = self.dataframe_from_subfeature()
+        else :
+            x_qual_df = self.dataframe_from_feature(self.Model_Structural_Embodied_CO2.x_features_str)
         x_quant_df = self.dataframe_from_feature(self.Model_Structural_Embodied_CO2.x_features_int)
         y_df = self.dataframe_from_feature(self.Model_Structural_Embodied_CO2.y_features)
 
